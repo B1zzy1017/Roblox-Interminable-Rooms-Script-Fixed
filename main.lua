@@ -30,7 +30,7 @@ local Window = Rayfield:CreateWindow({
 --Welcome Notification
 Rayfield:Notify({
    Title = "Interminable Rooms Script",
-   Content = "Successfully loaded! This script is uncomplete, so expect bugs.",
+   Content = "Successfully loaded! This script is incomplete, so expect bugs.",
    Duration = 5,
    Image = 4483362458,
 })
@@ -85,7 +85,7 @@ local Toggle = Tab:CreateToggle({
             connection = EntitiesFolder.ChildRemoved:Connect(function(entity)
                 Rayfield:Notify({
                    Title = entity.Name,
-                   Content = "Has deleted.",
+                   Content = "Has despawned.",
                    Duration = 5,
                    Image = 4483362458,
                 })
@@ -106,7 +106,7 @@ local Section = Tab4:CreateSection("Entity Notifier (Global Chat)")
 local connection0 = nil  -- add a variable to keep track of the connection
 
 local Toggle = Tab4:CreateToggle({
-    Name = "Glolbally Announce Entity Spawning in Chat",
+    Name = "Glolbally Announce Entity Spawning in Chat (Broken)",
     CurrentValue = false,
     Flag = "Toggle3",
     Callback = function(Value)
@@ -127,7 +127,7 @@ local Toggle = Tab4:CreateToggle({
 local connection1 = nil
 
 local Toggle = Tab4:CreateToggle({
-    Name = "Glolbally Announce Entity Despawning in Chat",
+    Name = "Glolbally Announce Entity Despawning in Chat (Broken)",
     CurrentValue = false,
     Flag = "Toggle4",
     Callback = function(Value)
@@ -173,7 +173,7 @@ local Section = Tab4:CreateSection("Full Heal")
 
 local connection2
 local Button = Tab4:CreateButton({
-    Name = "Instantly Heal Back to 100 HP",
+    Name = "Instantly Heal Back to 100 HP (Client health only)",
     Callback = function()
             game.Players.LocalPlayer.Character.Humanoid.Health = 100
   		end,
@@ -187,7 +187,7 @@ local Section = Tab4:CreateSection("Ignore Entities")
 
 local connection4
 local Toggle = Tab4:CreateToggle({
-    Name = "Godmode (NOT FINISHED)",
+    Name = "Godmode (NOT WORKING)",
     CurrentValue = false,
     Flag = "Toggle8",
     Callback = function(Value11)
@@ -211,7 +211,7 @@ local Section = Tab4:CreateSection("Ignore Jumpscares")
 
 local connection7
 local Toggle = Tab4:CreateToggle({
-    Name = "Disable Jumpscares",
+    Name = "Disable Jumpscares (This will remove all other huds created)",
     CurrentValue = false,
     Flag = "Toggle389",
     Callback = function(Value783)
@@ -248,7 +248,7 @@ local Toggle = Tab4:CreateToggle({
 
 
 
-local Paragraph = Tab4:CreateParagraph({Title = "Warning", Content = "\nFor some reason when you turn the button above on, it works, then when you turn it off, the code this toggles remains active, then from then on the on/off is reversed and idk why. Also I'm too lazt to fix it."})
+local Paragraph = Tab4:CreateParagraph({Title = "Warning", Content = "\nOnce turned on, always on"})
 
 
 
@@ -430,7 +430,7 @@ for i, v in pairs(game:GetService("Workspace").Entities:GetChildren()) do
  if v.Name == "A-10" then
 ESP:AddObjectListener(Workspace.Entities["A-10"], { 
     Name = "Torso", 
-    CustomName = 'A-10', 
+    CustomName = 'A-15', 
     Color = Color3.fromRGB(0, 21, 255), -- Color
     IsEnabled = "whatever" 
 })
@@ -442,7 +442,7 @@ for i, v in pairs(game:GetService("Workspace").Entities:GetChildren()) do
  if v.Name == "X-10" then
 ESP:AddObjectListener(Workspace.Entities["X-10"], { 
     Name = "Torso", 
-    CustomName = 'X-10', 
+    CustomName = 'X-15', 
     Color = Color3.fromRGB(19, 254, 254), -- Color
     IsEnabled = "whatever" 
 })
@@ -538,7 +538,7 @@ for i, v in pairs(game:GetService("Workspace").Entities:GetChildren()) do
  if v.Name == "A-120 Minion" then
 ESP:AddObjectListener(Workspace.Entities["A-120 Minion"], { 
     Name = "Torso", 
-    CustomName = 'TLUB-120', 
+    CustomName = 'M-120-A', 
     Color = Color3.fromRGB(251, 255, 0), -- Color
     IsEnabled = "whatever" 
 })
@@ -703,6 +703,42 @@ end
 end
 
 for i, v in pairs(game:GetService("Workspace").Entities:GetChildren()) do
+ if v.Name == "XE-1" then
+ESP:AddObjectListener(Workspace.Entities["DG-1"], { 
+    Name = "Torso", 
+    CustomName = 'DG-1', 
+    Color = Color3.fromRGB(104, 252, 206), -- Color
+    IsEnabled = "whatever" 
+})
+ESP.whatever = true
+end
+end
+
+for i, v in pairs(game:GetService("Workspace").Entities:GetChildren()) do
+ if v.Name == "CHA-1" then
+ESP:AddObjectListener(Workspace.Entities["XE-1"], { 
+    Name = "Torso", 
+    CustomName = 'XE-1', 
+    Color = Color3.fromRGB(104, 252, 206), -- Color
+    IsEnabled = "whatever" 
+})
+ESP.whatever = true
+end
+end
+
+for i, v in pairs(game:GetService("Workspace").Entities:GetChildren()) do
+ if v.Name == "BM-1" then
+ESP:AddObjectListener(Workspace.Entities["XE-1"], { 
+    Name = "Torso", 
+    CustomName = 'BM-1', 
+    Color = Color3.fromRGB(104, 252, 206), -- Color
+    IsEnabled = "whatever" 
+})
+ESP.whatever = true
+end
+end
+
+for i, v in pairs(game:GetService("Workspace").Entities:GetChildren()) do
  if v.Name == "E-22" then
 ESP:AddObjectListener(Workspace.Entities["E-22"], { 
     Name = "Torso", 
@@ -732,6 +768,18 @@ ESP:AddObjectListener(Workspace.Entities["E-42RIGHT"], {
     Name = "Torso", 
     CustomName = 'E-42', 
     Color = Color3.fromRGB(255, 201, 219), -- Color
+    IsEnabled = "whatever" 
+})
+ESP.whatever = true
+end
+end
+
+for i, v in pairs(game:GetService("Workspace").Entities:GetChildren()) do
+ if v.Name == "E-42" then
+ESP:AddObjectListener(Workspace.Entities["XE-1"], { 
+    Name = "Torso", 
+    CustomName = 'E-42', 
+    Color = Color3.fromRGB(104, 252, 206), -- Color
     IsEnabled = "whatever" 
 })
 ESP.whatever = true
@@ -1259,7 +1307,19 @@ ESP:AddObjectListener(Workspace.Entities["V-5"], {
 ESP.whatever = true
 end
 end
-
+	
+for i, v in pairs(game:GetService("Workspace").Entities:GetChildren()) do
+ if v.Name == "XV-5" then
+ESP:AddObjectListener(Workspace.Entities["V-5"], { 
+    Name = "Torso", 
+    CustomName = 'XV-5', 
+    Color = Color3.fromRGB(61, 252, 3), -- Color
+    IsEnabled = "whatever" 
+})
+ESP.whatever = true
+end
+end
+		
 for i, v in pairs(game:GetService("Workspace").Entities:GetChildren()) do
  if v.Name == "V-27" then
 ESP:AddObjectListener(Workspace.Entities["V-27"], { 
@@ -1290,6 +1350,18 @@ ESP:AddObjectListener(Workspace.Entities["V-50"], {
     Name = "Torso", 
     CustomName = 'V-50', 
     Color = Color3.fromRGB(187, 84, 255), -- Color
+    IsEnabled = "whatever" 
+})
+ESP.whatever = true
+end
+end
+
+for i, v in pairs(game:GetService("Workspace").Entities:GetChildren()) do
+ if v.Name == "E-0.6" then
+ESP:AddObjectListener(Workspace.Entities["V-50"], { 
+    Name = "Torso", 
+    CustomName = 'E-0.6', 
+    Color = Color3.fromRGB(61, 252, 3), -- Color
     IsEnabled = "whatever" 
 })
 ESP.whatever = true
@@ -1649,3 +1721,4 @@ local Paragraph = Tab3:CreateParagraph({Title = "Credits", Content = "\nScript m
 
 
 local Paragraph = Tab6:CreateParagraph({Title = "1.", Content = "Added Feature(s):\n\n- Remove Jumpscares\n\nDate Added: 5/22/23"})
+
