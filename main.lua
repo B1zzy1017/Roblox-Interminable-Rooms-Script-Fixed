@@ -39,8 +39,8 @@ Rayfield:Notify({
 
 --Tabs 
 local Tab = Window:CreateTab("Main", 4483362458)
-local Tab4 = Window:CreateTab("5Green's Mods :)", 4483362458)
-local Tab2 = Window:CreateTab("Entity Tips", 4483362458)
+local Tab4 = Window:CreateTab("5Green's Mods", 4483362458)
+local Tab2 = Window:CreateTab("Entity Tips (after af23)", 4483362458)
 local Tab5 = Window:CreateTab("Entity Tips (more in depth)", 4483362458)
 local Tab3 = Window:CreateTab("Credits", 4483362458)
 local Tab6 = Window:CreateTab("Change Logs", 4483362458)
@@ -92,54 +92,6 @@ local Toggle = Tab:CreateToggle({
             end)
         else
             connection:Disconnect()
-        end
-    end,
-})
-
-
-local Section = Tab4:CreateSection("Entity Notifier (Global Chat)")
-
-
-
-
---Toggles
-local connection0 = nil  -- add a variable to keep track of the connection
-
-local Toggle = Tab4:CreateToggle({
-    Name = "Glolbally Announce Entity Spawning in Chat (Broken)",
-    CurrentValue = false,
-    Flag = "Toggle3",
-    Callback = function(Value)
-        if Value and not connection0 then  -- if toggle is turned on and there is no connection
-            connection0 = EntitiesFolder.ChildAdded:Connect(function(entity)
-                if entity.Name ~= "TLUB-120" and entity.Name ~= "A-120 Minion" and entity.Name ~= "John" and entity.Name ~= "Noah" and entity.Name ~= "TLAB-278" and entity.Name ~= "ULB-278" and entity.Name ~= "A-245" and entity.Name ~= "A-258" and entity.Name ~= "JohnLocker" and entity.Name ~= "A-278" and entity.Name ~= "A-150" then
-                    game:GetService("ReplicatedStorage").DefaultChatSystemChatEvents.SayMessageRequest:FireServer(entity.Name .. " has spawned -_-", "All")
-                end
-            end)
-        elseif not Value and connection0 then  -- if toggle is turned off and there is a connection
-            connection0:Disconnect()  -- disconnect the connection
-            connection0 = nil  -- set the connection to nil
-        end
-    end,
-})
-
-
-local connection1 = nil
-
-local Toggle = Tab4:CreateToggle({
-    Name = "Glolbally Announce Entity Despawning in Chat (Broken)",
-    CurrentValue = false,
-    Flag = "Toggle4",
-    Callback = function(Value)
-        if Value and not connection1 then  -- if toggle is turned on and there is no connection
-            connection1 = EntitiesFolder.ChildRemoved:Connect(function(entity)
-                if entity.Name ~= "TLUB-120" and entity.Name ~= "A-120 Minion" and entity.Name ~= "John" and entity.Name ~= "Noah" and entity.Name ~= "TLAB-278" and entity.Name ~= "ULB-278" and entity.Name ~= "A-245" and entity.Name ~= "A-258" and entity.Name ~= "JohnLocker" and entity.Name ~= "A-278" and entity.Name ~= "A-150" then
-                    game:GetService("ReplicatedStorage").DefaultChatSystemChatEvents.SayMessageRequest:FireServer(entity.Name .. " has despawned :)", "All")
-                end
-            end)
-        elseif not Value and connection1 then  -- if toggle is turned off and there is a connection
-            connection1:Disconnect()  -- disconnect the connection
-            connection1 = nil  -- set the connection to nil
         end
     end,
 })
@@ -947,7 +899,7 @@ for i, v in pairs(game:GetService("Workspace").Entities:GetChildren()) do
 ESP:AddObjectListener(Workspace.Entities["XX-35"], { 
     Name = "Torso", 
     CustomName = 'XX-35', 
-    Color = Color3.fromRGB(182, 0, 255), -- Color
+    Color = Color3.fromRGB(0, 75, 255), -- Color
     IsEnabled = "whatever" 
 })
 ESP.whatever = true
@@ -959,7 +911,7 @@ for i, v in pairs(game:GetService("Workspace").Entities:GetChildren()) do
 ESP:AddObjectListener(Workspace.Entities["A-50"], { 
     Name = "Torso", 
     CustomName = 'FAKER', 
-    Color = Color3.fromRGB(182, 0, 255), -- Color
+    Color = Color3.fromRGB(255, 0, 0), -- Color
     IsEnabled = "whatever" 
 })
 ESP.whatever = true
@@ -971,7 +923,7 @@ for i, v in pairs(game:GetService("Workspace").Entities:GetChildren()) do
 ESP:AddObjectListener(Workspace.Entities["XX-60"], { 
     Name = "Torso", 
     CustomName = 'XX-60', 
-    Color = Color3.fromRGB(182, 0, 255), -- Color
+    Color = Color3.fromRGB(0, 255, 0), -- Color
     IsEnabled = "whatever" 
 })
 ESP.whatever = true
@@ -995,6 +947,114 @@ for i, v in pairs(game:GetService("Workspace").Entities:GetChildren()) do
 ESP:AddObjectListener(Workspace.Entities["A-247"], { 
     Name = "Torso", 
     CustomName = 'the one who rebounds', 
+    Color = Color3.fromRGB(182, 0, 255), -- Color
+    IsEnabled = "whatever" 
+})
+ESP.whatever = true
+end
+end
+
+for i, v in pairs(game:GetService("Workspace").Entities:GetChildren()) do
+ if v.Name == "X-220" then
+ESP:AddObjectListener(Workspace.Entities["X-220"], { 
+    Name = "Torso", 
+    CustomName = 'lamborgini', 
+    Color = Color3.fromRGB(182, 0, 255), -- Color
+    IsEnabled = "whatever" 
+})
+ESP.whatever = true
+end
+end
+
+for i, v in pairs(game:GetService("Workspace").Entities:GetChildren()) do
+ if v.Name == "X-247" then
+ESP:AddObjectListener(Workspace.Entities["X-247"], { 
+    Name = "Torso", 
+    CustomName = 'ambush?', 
+    Color = Color3.fromRGB(0, 140, 0), -- Color
+    IsEnabled = "whatever" 
+})
+ESP.whatever = true
+end
+end
+
+for i, v in pairs(game:GetService("Workspace").Entities:GetChildren()) do
+ if v.Name == "Billy" then
+ESP:AddObjectListener(Workspace.Entities["Billy"], { 
+    Name = "Torso", 
+    CustomName = 'Billy', 
+    Color = Color3.fromRGB(183, 0, 255), -- Color
+    IsEnabled = "whatever" 
+})
+ESP.whatever = true
+end
+end
+
+for i, v in pairs(game:GetService("Workspace").Entities:GetChildren()) do
+ if v.Name == "Purple Billy" then
+ESP:AddObjectListener(Workspace.Entities["Purple Billy"], { 
+    Name = "Torso", 
+    CustomName = 'Purple Billy', 
+    Color = Color3.fromRGB(0, 0, 255), -- Color
+    IsEnabled = "whatever" 
+})
+ESP.whatever = true
+end
+end
+
+for i, v in pairs(game:GetService("Workspace").Entities:GetChildren()) do
+ if v.Name == "Sad Billy" then
+ESP:AddObjectListener(Workspace.Entities["Sad Billy"], { 
+    Name = "Torso", 
+    CustomName = 'Sad Billy', 
+    Color = Color3.fromRGB(212, 0, 255), -- Color
+    IsEnabled = "whatever" 
+})
+ESP.whatever = true
+end
+end
+
+for i, v in pairs(game:GetService("Workspace").Entities:GetChildren()) do
+ if v.Name == "Bully Billy" then
+ESP:AddObjectListener(Workspace.Entities["Bully Billy"], { 
+    Name = "Torso", 
+    CustomName = 'Bully Billy', 
+    Color = Color3.fromRGB(255, 0, 0), -- Color
+    IsEnabled = "whatever" 
+})
+ESP.whatever = true
+end
+end
+
+for i, v in pairs(game:GetService("Workspace").Entities:GetChildren()) do
+ if v.Name == "rainbowA200" then
+ESP:AddObjectListener(Workspace.Entities["rainbowA200"], { 
+    Name = "Torso", 
+    CustomName = 'RainbowA-200', 
+    Color = Color3.fromRGB(255, 255, 255), -- Color
+    IsEnabled = "whatever" 
+})
+ESP.whatever = true
+end
+end
+
+for i, v in pairs(game:GetService("Workspace").Entities:GetChildren()) do
+ if v.Name == "cursedA300" then
+ESP:AddObjectListener(Workspace.Entities["cursedA300"], { 
+    Name = "Torso", 
+    CustomName = 'CursedA-300', 
+    Color = Color3.fromRGB(255, 255, 255), -- Color
+    IsEnabled = "whatever" 
+})
+ESP.whatever = true
+end
+end
+
+for i, v in pairs(game:GetService("Workspace").Entities:GetChildren()) do
+ if v.Name == "XXE-1" then
+ESP:AddObjectListener(Workspace.Entities["XXE-1"], { 
+    Name = "Torso", 
+    CustomName = 'XXE-1', 
     Color = Color3.fromRGB(182, 0, 255), -- Color
     IsEnabled = "whatever" 
 })
@@ -1043,27 +1103,6 @@ end)
 })
 
 
-local Section = Tab:CreateSection("No-Drain Flashlights")
-
-
- local Button = Tab:CreateButton({
-    Name = "Infinite Flashlight",
-    Callback = function()
-        game.Players.LocalPlayer.Character.FlashlightValues:Destroy()
-        game.Players.LocalPlayer.Character.Battery.Value = math.huge
-    end,
- })
-
-
- local Button = Tab:CreateButton({
-    Name = "Infinite Gummy Flashlight (Requires Gamepass)",
-    Callback = function()
-        game.Players.LocalPlayer.Character.GummyFlashlightValue:Destroy()
-        game.Players.LocalPlayer.Character.GummyBattery.Value = math.huge
-    end,
- })
- 
- 
  local Section = Tab:CreateSection("Speed")
  
  
@@ -1357,6 +1396,7 @@ local Paragraph = Tab3:CreateParagraph({Title = "Credits", Content = "\nScript m
 
 
 local Paragraph = Tab6:CreateParagraph({Title = "1.", Content = "Added Feature(s):\n\n- Remove Jumpscares\n\nDate Added: 5/22/23"})
+
 
 
 
