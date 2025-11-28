@@ -2,9 +2,9 @@ local Rayfield = loadstring(game:HttpGet('https://raw.githubusercontent.com/Siri
 
 --Window
 local Window = Rayfield:CreateWindow({
-   Name = "Interminable Rooms | V4 (5Green's Mod)",
+   Name = "Interminable Rooms | V5 Beta)",
    LoadingTitle = "An Interminable Rooms Script",
-   LoadingSubtitle = "by Nenarus#3186",
+   LoadingSubtitle = "by Nenarus#3186 (Remade by B1zzy1017)",
    ConfigurationSaving = {
       Enabled = true,
       FolderName = nil, -- Create a custom folder for your hub/game
@@ -1745,5 +1745,6 @@ local Paragraph = Tab3:CreateParagraph({Title = "Credits", Content = "\nScript m
 
 
 local Paragraph = Tab6:CreateParagraph({Title = "1.", Content = "Added Feature(s):\n\n- Remove Jumpscares\n\nDate Added: 5/22/23"})
+
 
 
