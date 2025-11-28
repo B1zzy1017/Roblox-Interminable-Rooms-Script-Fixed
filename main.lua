@@ -931,6 +931,78 @@ end
 end
 
 for i, v in pairs(game:GetService("Workspace").Entities:GetChildren()) do
+ if v.Name == "XX-10" then
+ESP:AddObjectListener(Workspace.Entities["XX-10"], { 
+    Name = "Torso", 
+    CustomName = 'XX-15', 
+    Color = Color3.fromRGB(255, 0, 0), -- Color
+    IsEnabled = "whatever" 
+})
+ESP.whatever = true
+end
+end
+
+for i, v in pairs(game:GetService("Workspace").Entities:GetChildren()) do
+ if v.Name == "XX-35" then
+ESP:AddObjectListener(Workspace.Entities["XX-35"], { 
+    Name = "Torso", 
+    CustomName = 'XX-35', 
+    Color = Color3.fromRGB(182, 0, 255), -- Color
+    IsEnabled = "whatever" 
+})
+ESP.whatever = true
+end
+end
+
+for i, v in pairs(game:GetService("Workspace").Entities:GetChildren()) do
+ if v.Name == "A-50" then
+ESP:AddObjectListener(Workspace.Entities["A-50"], { 
+    Name = "Torso", 
+    CustomName = 'FAKER', 
+    Color = Color3.fromRGB(182, 0, 255), -- Color
+    IsEnabled = "whatever" 
+})
+ESP.whatever = true
+end
+end
+
+for i, v in pairs(game:GetService("Workspace").Entities:GetChildren()) do
+ if v.Name == "XX-60" then
+ESP:AddObjectListener(Workspace.Entities["XX-60"], { 
+    Name = "Torso", 
+    CustomName = 'XX-60', 
+    Color = Color3.fromRGB(182, 0, 255), -- Color
+    IsEnabled = "whatever" 
+})
+ESP.whatever = true
+end
+end
+
+for i, v in pairs(game:GetService("Workspace").Entities:GetChildren()) do
+ if v.Name == "A-220" then
+ESP:AddObjectListener(Workspace.Entities["A-220"], { 
+    Name = "Torso", 
+    CustomName = 'the car', 
+    Color = Color3.fromRGB(0, 255, 255), -- Color
+    IsEnabled = "whatever" 
+})
+ESP.whatever = true
+end
+end
+
+for i, v in pairs(game:GetService("Workspace").Entities:GetChildren()) do
+ if v.Name == "A-247" then
+ESP:AddObjectListener(Workspace.Entities["A-247"], { 
+    Name = "Torso", 
+    CustomName = 'the one who rebounds', 
+    Color = Color3.fromRGB(182, 0, 255), -- Color
+    IsEnabled = "whatever" 
+})
+ESP.whatever = true
+end
+end
+
+for i, v in pairs(game:GetService("Workspace").Entities:GetChildren()) do
  if v.Name == "Noah" then
 ESP:AddObjectListener(Workspace.Entities.Noah, { 
     Name = "Torso", 
@@ -1285,6 +1357,7 @@ local Paragraph = Tab3:CreateParagraph({Title = "Credits", Content = "\nScript m
 
 
 local Paragraph = Tab6:CreateParagraph({Title = "1.", Content = "Added Feature(s):\n\n- Remove Jumpscares\n\nDate Added: 5/22/23"})
+
 
 
 
