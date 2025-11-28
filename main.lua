@@ -979,8 +979,8 @@ end
 end
 
 for i, v in pairs(game:GetService("Workspace").Entities:GetChildren()) do
- if v.Name == "Billy" then
-ESP:AddObjectListener(Workspace.Entities["Billy"], { 
+ if v.Name == "billy" then
+ESP:AddObjectListener(Workspace.Entities["billy"], { 
     Name = "Torso", 
     CustomName = 'Billy', 
     Color = Color3.fromRGB(183, 0, 255), -- Color
@@ -991,8 +991,8 @@ end
 end
 
 for i, v in pairs(game:GetService("Workspace").Entities:GetChildren()) do
- if v.Name == "Purple Billy" then
-ESP:AddObjectListener(Workspace.Entities["Purple Billy"], { 
+ if v.Name == "purplebilly" then
+ESP:AddObjectListener(Workspace.Entities["purplebilly"], { 
     Name = "Torso", 
     CustomName = 'Purple Billy', 
     Color = Color3.fromRGB(0, 0, 255), -- Color
@@ -1003,8 +1003,8 @@ end
 end
 
 for i, v in pairs(game:GetService("Workspace").Entities:GetChildren()) do
- if v.Name == "Sad Billy" then
-ESP:AddObjectListener(Workspace.Entities["Sad Billy"], { 
+ if v.Name == "sadbilly" then
+ESP:AddObjectListener(Workspace.Entities["sadbilly"], { 
     Name = "Torso", 
     CustomName = 'Sad Billy', 
     Color = Color3.fromRGB(212, 0, 255), -- Color
@@ -1015,8 +1015,8 @@ end
 end
 
 for i, v in pairs(game:GetService("Workspace").Entities:GetChildren()) do
- if v.Name == "Bully Billy" then
-ESP:AddObjectListener(Workspace.Entities["Bully Billy"], { 
+ if v.Name == "bullybilly" then
+ESP:AddObjectListener(Workspace.Entities["bullybilly"], { 
     Name = "Torso", 
     CustomName = 'Bully Billy', 
     Color = Color3.fromRGB(255, 0, 0), -- Color
@@ -1396,6 +1396,7 @@ local Paragraph = Tab3:CreateParagraph({Title = "Credits", Content = "\nScript m
 
 
 local Paragraph = Tab6:CreateParagraph({Title = "1.", Content = "Added Feature(s):\n\n- Remove Jumpscares\n\nDate Added: 5/22/23"})
+
 
 
 
