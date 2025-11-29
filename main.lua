@@ -1658,6 +1658,8 @@ end)
 local Button = Tab:CreateButton({
    Name = "Scary Entity ESP",
    Callback = function()
+    EntitiesFolder.ChildAdded:Connect(function(entity) 
+	pcall(function()
    -- loadstring
 local ESP = loadstring(game:HttpGet("https://kiriot22.com/releases/ESP.lua"))()
 
@@ -2321,6 +2323,7 @@ local Paragraph = Tab3:CreateParagraph({Title = "Credits", Content = "\nScript m
 
 
 local Paragraph = Tab6:CreateParagraph({Title = "1.", Content = "Added Feature(s):\n\n- Remove Jumpscares\n\nDate Added: 5/22/23"})
+
 
 
 
