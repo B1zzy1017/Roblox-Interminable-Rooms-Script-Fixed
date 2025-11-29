@@ -502,7 +502,7 @@ for i, v in pairs(game:GetService("Workspace").Entities:GetChildren()) do
  if v.Name == "A-80" then
 ESP:AddObjectListener(Workspace.Entities["A-80"], { 
     Name = "Torso", 
-    CustomName = 'A-80', 
+    CustomName = 'A-80 (rip)', 
     Color = Color3.fromRGB(0, 199, 27), -- Color
     IsEnabled = "whatever" 
 })
@@ -608,7 +608,7 @@ end
 
 for i, v in pairs(game:GetService("Workspace").Entities:GetChildren()) do
  if v.Name == "A-258" then
-ESP:AddObjectListener(Workspace.Entities["A-258"], { 
+ESP:AddObjectListener(Workspace.Entities["A-258 (Rip)"], { 
     Name = "Torso", 
     CustomName = 'A-258', 
     Color = Color3.fromRGB(255, 174, 0), -- Color
@@ -2429,6 +2429,7 @@ local Paragraph = Tab3:CreateParagraph({Title = "Credits", Content = "\nScript m
 
 
 local Paragraph = Tab6:CreateParagraph({Title = "1.", Content = "Added Feature(s):\n\n- Remove Jumpscares\n\nDate Added: 5/22/23"})
+
 
 
 
