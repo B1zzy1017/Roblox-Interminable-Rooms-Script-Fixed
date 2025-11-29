@@ -430,7 +430,7 @@ for i, v in pairs(game:GetService("Workspace").Entities:GetChildren()) do
  if v.Name == "A-10" then
 ESP:AddObjectListener(Workspace.Entities["A-10"], { 
     Name = "Torso", 
-    CustomName = 'A-10', 
+    CustomName = 'A-15', 
     Color = Color3.fromRGB(0, 21, 255), -- Color
     IsEnabled = "whatever" 
 })
@@ -442,7 +442,7 @@ for i, v in pairs(game:GetService("Workspace").Entities:GetChildren()) do
  if v.Name == "X-10" then
 ESP:AddObjectListener(Workspace.Entities["X-10"], { 
     Name = "Torso", 
-    CustomName = 'X-10', 
+    CustomName = 'X-15', 
     Color = Color3.fromRGB(19, 254, 254), -- Color
     IsEnabled = "whatever" 
 })
@@ -538,7 +538,7 @@ for i, v in pairs(game:GetService("Workspace").Entities:GetChildren()) do
  if v.Name == "A-120 Minion" then
 ESP:AddObjectListener(Workspace.Entities["A-120 Minion"], { 
     Name = "Torso", 
-    CustomName = 'TLUB-120', 
+    CustomName = 'M-120', 
     Color = Color3.fromRGB(251, 255, 0), -- Color
     IsEnabled = "whatever" 
 })
@@ -575,6 +575,18 @@ for i, v in pairs(game:GetService("Workspace").Entities:GetChildren()) do
 ESP:AddObjectListener(Workspace.Entities["A-200"], { 
     Name = "Torso", 
     CustomName = 'A-200', 
+    Color = Color3.fromRGB(255, 255, 255), -- Color
+    IsEnabled = "whatever" 
+})
+ESP.whatever = true
+end
+end
+
+for i, v in pairs(game:GetService("Workspace").Entities:GetChildren()) do
+ if v.Name == "X-200" then
+ESP:AddObjectListener(Workspace.Entities["X-200"], { 
+    Name = "Torso", 
+    CustomName = 'X-200', 
     Color = Color3.fromRGB(255, 255, 255), -- Color
     IsEnabled = "whatever" 
 })
@@ -622,7 +634,7 @@ for i, v in pairs(game:GetService("Workspace").Entities:GetChildren()) do
  if v.Name == "ULB-278" then
 ESP:AddObjectListener(Workspace.Entities["ULB-278"], { 
     Name = "Torso", 
-    CustomName = 'ULB-258', 
+    CustomName = 'ULB-278', 
     Color = Color3.fromRGB(0, 0, 255), -- Color
     IsEnabled = "whatever" 
 })
@@ -703,11 +715,59 @@ end
 end
 
 for i, v in pairs(game:GetService("Workspace").Entities:GetChildren()) do
+ if v.Name == "DG-1" then
+ESP:AddObjectListener(Workspace.Entities["DG-1"], { 
+    Name = "Torso", 
+    CustomName = 'DG-1', 
+    Color = Color3.fromRGB(238, 0, 255), -- Color
+    IsEnabled = "whatever" 
+})
+ESP.whatever = true
+end
+end
+
+for i, v in pairs(game:GetService("Workspace").Entities:GetChildren()) do
+ if v.Name == "CHA-1" then
+ESP:AddObjectListener(Workspace.Entities["CHA-1"], { 
+    Name = "Torso", 
+    CustomName = 'CHA-1', 
+    Color = Color3.fromRGB(104, 252, 206), -- Color
+    IsEnabled = "whatever" 
+})
+ESP.whatever = true
+end
+end
+
+for i, v in pairs(game:GetService("Workspace").Entities:GetChildren()) do
+ if v.Name == "BM-1" then
+ESP:AddObjectListener(Workspace.Entities["BM-1"], { 
+    Name = "Torso", 
+    CustomName = 'BM-1', 
+    Color = Color3.fromRGB(99, 1, 1), -- Color
+    IsEnabled = "whatever" 
+})
+ESP.whatever = true
+end
+end
+
+for i, v in pairs(game:GetService("Workspace").Entities:GetChildren()) do
  if v.Name == "E-22" then
 ESP:AddObjectListener(Workspace.Entities["E-22"], { 
     Name = "Torso", 
     CustomName = 'E-22', 
     Color = Color3.fromRGB(252, 128, 57), -- Color
+    IsEnabled = "whatever" 
+})
+ESP.whatever = true
+end
+end
+
+for i, v in pairs(game:GetService("Workspace").Entities:GetChildren()) do
+ if v.Name == "XE-22" then
+ESP:AddObjectListener(Workspace.Entities["XE-22"], { 
+    Name = "Torso", 
+    CustomName = 'XE-22', 
+    Color = Color3.fromRGB(0, 255, 247), -- Color
     IsEnabled = "whatever" 
 })
 ESP.whatever = true
@@ -729,6 +789,18 @@ end
 for i, v in pairs(game:GetService("Workspace").Entities:GetChildren()) do
  if v.Name == "E-42RIGHT" then
 ESP:AddObjectListener(Workspace.Entities["E-42RIGHT"], { 
+    Name = "Torso", 
+    CustomName = 'E-42', 
+    Color = Color3.fromRGB(255, 201, 219), -- Color
+    IsEnabled = "whatever" 
+})
+ESP.whatever = true
+end
+end
+
+for i, v in pairs(game:GetService("Workspace").Entities:GetChildren()) do
+ if v.Name == "E-42" then
+ESP:AddObjectListener(Workspace.Entities["E-42"], { 
     Name = "Torso", 
     CustomName = 'E-42', 
     Color = Color3.fromRGB(255, 201, 219), -- Color
@@ -791,6 +863,18 @@ for i, v in pairs(game:GetService("Workspace").Entities:GetChildren()) do
 ESP:AddObjectListener(Workspace.Entities["V-5"], { 
     Name = "Torso", 
     CustomName = 'V-5', 
+    Color = Color3.fromRGB(255, 255, 255), -- Color
+    IsEnabled = "whatever" 
+})
+ESP.whatever = true
+end
+end
+
+for i, v in pairs(game:GetService("Workspace").Entities:GetChildren()) do
+ if v.Name == "XV-5" then
+ESP:AddObjectListener(Workspace.Entities["XV-5"], { 
+    Name = "Torso", 
+    CustomName = 'XV-5', 
     Color = Color3.fromRGB(255, 255, 255), -- Color
     IsEnabled = "whatever" 
 })
@@ -1649,3 +1733,4 @@ local Paragraph = Tab3:CreateParagraph({Title = "Credits", Content = "\nScript m
 
 
 local Paragraph = Tab6:CreateParagraph({Title = "1.", Content = "Added Feature(s):\n\n- Remove Jumpscares\n\nDate Added: 5/22/23"})
+
