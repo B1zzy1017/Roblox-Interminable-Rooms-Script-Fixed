@@ -2215,6 +2215,150 @@ end
 end
 
 for i, v in pairs(game:GetService("Workspace").Entities:GetChildren()) do
+ if v.Name == "X-246" then
+ESP:AddObjectListener(Workspace.Entities["X-246"], { 
+    Name = "Torso", 
+    CustomName = 'X-246', 
+    Color = Color3.fromRGB(0, 255, 0), -- Color
+    IsEnabled = "whatever" 
+})
+ESP.whatever = true
+end
+end
+
+for i, v in pairs(game:GetService("Workspace").Entities:GetChildren()) do
+ if v.Name == "xh246" then
+ESP:AddObjectListener(Workspace.Entities["xh246"], { 
+    Name = "Torso", 
+    CustomName = 'the xrime', 
+    Color = Color3.fromRGB(182, 0, 255), -- Color
+    IsEnabled = "whatever" 
+})
+ESP.whatever = true
+end
+end
+
+for i, v in pairs(game:GetService("Workspace").Entities:GetChildren()) do
+ if v.Name == "A-248" then
+ESP:AddObjectListener(Workspace.Entities["A-248"], { 
+    Name = "Torso", 
+    CustomName = 'A-248', 
+    Color = Color3.fromRGB(182, 0, 255), -- Color
+    IsEnabled = "whatever" 
+})
+ESP.whatever = true
+end
+end
+
+for i, v in pairs(game:GetService("Workspace").Entities:GetChildren()) do
+ if v.Name == "X-248" then
+ESP:AddObjectListener(Workspace.Entities["X-248"], { 
+    Name = "Torso", 
+    CustomName = 'X-248', 
+    Color = Color3.fromRGB(0, 255, 0), -- Color
+    IsEnabled = "whatever" 
+})
+ESP.whatever = true
+end
+end
+
+for i, v in pairs(game:GetService("Workspace").Entities:GetChildren()) do
+ if v.Name == "X-258" then
+ESP:AddObjectListener(Workspace.Entities["X-258"], { 
+    Name = "Torso", 
+    CustomName = 'X-258', 
+    Color = Color3.fromRGB(0, 255, 255), -- Color
+    IsEnabled = "whatever" 
+})
+ESP.whatever = true
+end
+end
+
+for i, v in pairs(game:GetService("Workspace").Entities:GetChildren()) do
+ if v.Name == "X-278" then
+ESP:AddObjectListener(Workspace.Entities["X-278"], { 
+    Name = "Torso", 
+    CustomName = 'X-278', 
+    Color = Color3.fromRGB(183, 0, 255), -- Color
+    IsEnabled = "whatever" 
+})
+ESP.whatever = true
+end
+end
+
+for i, v in pairs(game:GetService("Workspace").Entities:GetChildren()) do
+ if v.Name == "bubugugup" then
+ESP:AddObjectListener(Workspace.Entities["bubugugup"], { 
+    Name = "Torso", 
+    CustomName = 'bubugugup', 
+    Color = Color3.fromRGB(0, 0, 255), -- Color
+    IsEnabled = "whatever" 
+})
+ESP.whatever = true
+end
+end
+
+for i, v in pairs(game:GetService("Workspace").Entities:GetChildren()) do
+ if v.Name == "XTLAB-278" then
+ESP:AddObjectListener(Workspace.Entities["XTLAB-278"], { 
+    Name = "Torso", 
+    CustomName = 'XTLAB-278', 
+    Color = Color3.fromRGB(212, 0, 255), -- Color
+    IsEnabled = "whatever" 
+})
+ESP.whatever = true
+end
+end
+
+for i, v in pairs(game:GetService("Workspace").Entities:GetChildren()) do
+ if v.Name == "X-300" then
+ESP:AddObjectListener(Workspace.Entities["X-300"], { 
+    Name = "Torso", 
+    CustomName = 'X-300', 
+    Color = Color3.fromRGB(255, 255, 255), -- Color
+    IsEnabled = "whatever" 
+})
+ESP.whatever = true
+end
+end
+
+for i, v in pairs(game:GetService("Workspace").Entities:GetChildren()) do
+ if v.Name == "XX-300" then
+ESP:AddObjectListener(Workspace.Entities["XX-300"], { 
+    Name = "Torso", 
+    CustomName = 'XX-300', 
+    Color = Color3.fromRGB(255, 255, 255), -- Color
+    IsEnabled = "whatever" 
+})
+ESP.whatever = true
+end
+end
+
+for i, v in pairs(game:GetService("Workspace").Entities:GetChildren()) do
+ if v.Name == "X-332" then
+ESP:AddObjectListener(Workspace.Entities["X-332"], { 
+    Name = "Torso", 
+    CustomName = 'X-332', 
+    Color = Color3.fromRGB(255, 255, 0), -- Color
+    IsEnabled = "whatever" 
+})
+ESP.whatever = true
+end
+end
+
+for i, v in pairs(game:GetService("Workspace").Entities:GetChildren()) do
+ if v.Name == "X-350" then
+ESP:AddObjectListener(Workspace.Entities["X-350"], { 
+    Name = "Torso", 
+    CustomName = 'X-350', 
+    Color = Color3.fromRGB(100, 100, 100), -- Color
+    IsEnabled = "whatever" 
+})
+ESP.whatever = true
+end
+end
+
+for i, v in pairs(game:GetService("Workspace").Entities:GetChildren()) do
  if v.Name == "Noah" then
 ESP:AddObjectListener(Workspace.Entities.["Noah"], { 
     Name = "Torso", 
@@ -2572,6 +2716,7 @@ local Paragraph = Tab3:CreateParagraph({Title = "Credits", Content = "\nScript m
 
 
 local Paragraph = Tab6:CreateParagraph({Title = "1.", Content = "Added Feature(s):\n\n- Remove Jumpscares\n\nDate Added: 5/22/23"})
+
 
 
 
