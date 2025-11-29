@@ -9,7 +9,7 @@ https://www.roblox.com/games/11403953272/INTERMINABLE-ROOMS (Created by zvardinR
 
 https://www.roblox.com/games/88497736885369/INTERMINABLE-FEVER (Created by UnusuaIlty)
 
-Update (11/28/25): scary mode!!!
+Update (11/28/25): dumbpost entities
 
 CREDITS ONCE AGAIN
 
