@@ -1,0 +1,3 @@
+loadstring(game:HttpGet("https://raw.githubusercontent.com/B1zzy1017/Roblox-Interminable-Rooms-Script-Fixed/refs/heads/main/chatgpt%20ir%20script.lua"))()
+
+loadstring(game:HttpGet("https://raw.githubusercontent.com/B1zzy1017/Roblox-Interminable-Rooms-Script-Fixed/refs/heads/main/chatgpt%20ir%20script%202.lua"))()
