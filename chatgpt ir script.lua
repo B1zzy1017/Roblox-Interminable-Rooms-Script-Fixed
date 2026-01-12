@@ -1,63 +1,73 @@
--- LocalScript in StarterPlayerScripts
-
 local Players = game:GetService("Players")
 local RunService = game:GetService("RunService")
 local workspace = game:GetService("Workspace")
 
 local player = Players.LocalPlayer
-local character = player.Character or player.CharacterAdded:Wait()
-local root = character:WaitForChild("HumanoidRootPart")
+local root
+
+-- Rebind root on respawn
+local function onCharacterAdded(character)
+    root = character:WaitForChild("HumanoidRootPart")
+end
+
+if player.Character then
+    onCharacterAdded(player.Character)
+end
+player.CharacterAdded:Connect(onCharacterAdded)
 
 local entities = workspace:WaitForChild("Entities")
 
--- Finds a BasePart to attach the ESP to
+-- Distance thresholds (studs)
+local NEAR_DISTANCE = 150
+local FAR_DISTANCE = 300
+
+-- Convert distance → color (Green → Yellow → Red)
+local function getDistanceColor(distance)
+    if distance <= NEAR_DISTANCE then
+        -- Green → Yellow
+        local t = distance / NEAR_DISTANCE
+        return Color3.new(t, 1, 0)
+    else
+        -- Yellow → Red
+        local t = math.clamp((distance - NEAR_DISTANCE) / (FAR_DISTANCE - NEAR_DISTANCE), 0, 1)
+        return Color3.new(1, 1 - t, 0)
+    end
+end
+
+-- Find adornee
 local function findAdornee(obj)
     if obj:IsA("BasePart") then
         return obj
     end
     if obj:IsA("Model") then
-        if obj.PrimaryPart then
-            return obj.PrimaryPart
-        end
+        if obj.PrimaryPart then return obj.PrimaryPart end
         for _, d in ipairs(obj:GetDescendants()) do
-            if d:IsA("BasePart") then
-                return d
-            end
+            if d:IsA("BasePart") then return d end
         end
     end
     return nil
 end
 
--- Creates ESP inside the entity
+-- Create ESP
 local function createESP(obj)
-    if obj:FindFirstChild("ESP") then
-        return
-    end
+    if obj:FindFirstChild("ESP") then return end
 
     local adornee = findAdornee(obj)
-    if not adornee then
-        return
-    end
+    if not adornee then return end
 
     local espFolder = Instance.new("Folder")
     espFolder.Name = "ESP"
     espFolder.Parent = obj
 
-    ------------------------------
     -- Highlight
-    ------------------------------
     local highlight = Instance.new("Highlight")
     highlight.Name = "Highlight"
     highlight.Adornee = adornee
-    highlight.FillColor = Color3.fromRGB(255, 0, 0)
-    highlight.OutlineColor = Color3.fromRGB(255, 255, 255)
-    highlight.FillTransparency = 0.7
+    highlight.FillTransparency = 0.6
     highlight.OutlineTransparency = 0
     highlight.Parent = espFolder
 
-    ------------------------------
-    -- Name + Distance Billboard
-    ------------------------------
+    -- Billboard
     local billboard = Instance.new("BillboardGui")
     billboard.Name = "NameTag"
     billboard.Adornee = adornee
@@ -67,57 +77,60 @@ local function createESP(obj)
     billboard.Parent = espFolder
 
     local text = Instance.new("TextLabel")
+    text.Name = "Text"
     text.BackgroundTransparency = 1
     text.Size = UDim2.new(1, 0, 1, 0)
     text.Font = Enum.Font.GothamBold
-    text.TextColor3 = Color3.new(1, 1, 1)
     text.TextScaled = true
     text.TextStrokeTransparency = 0
-    text.Name = "Text"
     text.Parent = billboard
-
-    -- Initial text
-    text.Text = obj.Name .. " (0)"
 end
 
--- Removes ESP
+-- Remove ESP
 local function removeESP(obj)
     local esp = obj:FindFirstChild("ESP")
     if esp then esp:Destroy() end
 end
 
--- Apply ESP to existing
+-- Existing entities
 for _, entity in ipairs(entities:GetChildren()) do
     createESP(entity)
 end
 
--- Apply ESP to new entities
 entities.ChildAdded:Connect(createESP)
 entities.ChildRemoved:Connect(removeESP)
 
--- CONSTANT UPDATE LOOP
+-- Update loop
 RunService.Heartbeat:Connect(function()
-    for _, entity in ipairs(entities:GetChildren()) do
-        if not entity:IsA("Folder") then
-            local esp = entity:FindFirstChild("ESP")
-            if not esp then
-                createESP(entity)
-            else
-                local adornee = findAdornee(entity)
-                if adornee then
-                    -- update Highlight + NameTag adornee
-                    if esp:FindFirstChild("Highlight") then
-                        esp.Highlight.Adornee = adornee
-                    end
-                    if esp:FindFirstChild("NameTag") then
-                        esp.NameTag.Adornee = adornee
-                    end
+    if not root then return end
 
-                    -- update distance text
-                    local textLabel = esp:FindFirstChild("NameTag") and esp.NameTag:FindFirstChild("Text")
-                    if textLabel then
-                        local dist = (adornee.Position - root.Position).Magnitude
-                        textLabel.Text = string.format("%s (%d)", entity.Name, dist)
+    for _, entity in ipairs(entities:GetChildren()) do
+        local esp = entity:FindFirstChild("ESP")
+        if not esp then
+            createESP(entity)
+        else
+            local adornee = findAdornee(entity)
+            if adornee then
+                -- Distance
+                local distance = (adornee.Position - root.Position).Magnitude
+                local color = getDistanceColor(distance)
+
+                -- Update highlight
+                local highlight = esp:FindFirstChild("Highlight")
+                if highlight then
+                    highlight.Adornee = adornee
+                    highlight.FillColor = color
+                    highlight.OutlineColor = color
+                end
+
+                -- Update name + distance
+                local nameTag = esp:FindFirstChild("NameTag")
+                if nameTag then
+                    nameTag.Adornee = adornee
+                    local label = nameTag:FindFirstChild("Text")
+                    if label then
+                        label.TextColor3 = color
+                        label.Text = string.format("%s (%d)", entity.Name, distance)
                     end
                 end
             end
