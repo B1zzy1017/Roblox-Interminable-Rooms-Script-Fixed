@@ -1,17 +1,43 @@
--- LocalScript for ESP in workspace.OtherStuff
-
 local Players = game:GetService("Players")
 local RunService = game:GetService("RunService")
 local workspace = game:GetService("Workspace")
 
 local player = Players.LocalPlayer
-local character = player.Character or player.CharacterAdded:Wait()
-local root = character:WaitForChild("HumanoidRootPart")
+local root -- updated every respawn
 
-local folder = workspace:WaitForChild("OtherStuff") -- <<--- CHANGED
+-- Rebind HumanoidRootPart on respawn (FIXES death bug)
+local function onCharacterAdded(character)
+    root = character:WaitForChild("HumanoidRootPart")
+end
 
+if player.Character then
+    onCharacterAdded(player.Character)
+end
+player.CharacterAdded:Connect(onCharacterAdded)
 
--- Find a BasePart to use as the adornee for ESP
+-- TARGET FOLDER
+local folder = workspace:WaitForChild("OtherStuff")
+
+-- Distance thresholds (studs)
+local NEAR_DISTANCE = 150
+local FAR_DISTANCE = 300
+
+-- Distance → Color (Green → Yellow → Red)
+local function getDistanceColor(distance)
+    if distance <= NEAR_DISTANCE then
+        local t = distance / NEAR_DISTANCE
+        return Color3.new(t, 1, 0)
+    else
+        local t = math.clamp(
+            (distance - NEAR_DISTANCE) / (FAR_DISTANCE - NEAR_DISTANCE),
+            0,
+            1
+        )
+        return Color3.new(1, 1 - t, 0)
+    end
+end
+
+-- Find BasePart to attach ESP to
 local function findAdornee(obj)
     if obj:IsA("BasePart") then
         return obj
@@ -29,37 +55,26 @@ local function findAdornee(obj)
     return nil
 end
 
-
--- Create ESP inside the object
+-- Create ESP inside object
 local function createESP(obj)
-    if obj:FindFirstChild("ESP") then
-        return
-    end
+    if obj:FindFirstChild("ESP") then return end
 
     local adornee = findAdornee(obj)
-    if not adornee then
-        return
-    end
+    if not adornee then return end
 
     local espFolder = Instance.new("Folder")
     espFolder.Name = "ESP"
     espFolder.Parent = obj
 
-    -------------------------
-    -- Highlight ESP
-    -------------------------
+    -- Highlight
     local highlight = Instance.new("Highlight")
     highlight.Name = "Highlight"
     highlight.Adornee = adornee
-    highlight.FillColor = Color3.fromRGB(255, 0, 0)
-    highlight.OutlineColor = Color3.fromRGB(255, 255, 255)
-    highlight.FillTransparency = 0.7
+    highlight.FillTransparency = 0.6
     highlight.OutlineTransparency = 0
     highlight.Parent = espFolder
 
-    -------------------------
-    -- Billboard with Name & Distance
-    -------------------------
+    -- Billboard (Name + Distance)
     local billboard = Instance.new("BillboardGui")
     billboard.Name = "NameTag"
     billboard.Adornee = adornee
@@ -73,55 +88,56 @@ local function createESP(obj)
     text.BackgroundTransparency = 1
     text.Size = UDim2.new(1, 0, 1, 0)
     text.Font = Enum.Font.GothamBold
-    text.TextColor3 = Color3.new(1, 1, 1)
     text.TextScaled = true
     text.TextStrokeTransparency = 0
     text.Parent = billboard
 end
 
-
--- Remove ESP folder
+-- Remove ESP
 local function removeESP(obj)
     local esp = obj:FindFirstChild("ESP")
     if esp then esp:Destroy() end
 end
 
-
--- Create ESP for existing objects
-for _, item in ipairs(folder:GetChildren()) do
-    createESP(item)
+-- Existing objects
+for _, obj in ipairs(folder:GetChildren()) do
+    createESP(obj)
 end
 
--- Create ESP for new objects
+-- New objects
 folder.ChildAdded:Connect(createESP)
 folder.ChildRemoved:Connect(removeESP)
 
-
 -- CONSTANT UPDATE LOOP
 RunService.Heartbeat:Connect(function()
-    for _, item in ipairs(folder:GetChildren()) do
-        if not item:IsA("Folder") then
-            local esp = item:FindFirstChild("ESP")
+    if not root then return end
 
-            -- create ESP if it appears later
-            if not esp then
-                createESP(item)
-            else
-                local adornee = findAdornee(item)
-                if adornee then
-                    -- Refresh Adornee in case the model loads parts later
-                    if esp:FindFirstChild("Highlight") then
-                        esp.Highlight.Adornee = adornee
-                    end
-                    if esp:FindFirstChild("NameTag") then
-                        esp.NameTag.Adornee = adornee
-                    end
+    for _, obj in ipairs(folder:GetChildren()) do
+        local esp = obj:FindFirstChild("ESP")
+        if not esp then
+            createESP(obj)
+        else
+            local adornee = findAdornee(obj)
+            if adornee then
+                local distance = (adornee.Position - root.Position).Magnitude
+                local color = getDistanceColor(distance)
 
-                    -- Update distance
-                    local label = esp.NameTag:FindFirstChild("Text")
+                -- Update Highlight
+                local highlight = esp:FindFirstChild("Highlight")
+                if highlight then
+                    highlight.Adornee = adornee
+                    highlight.FillColor = color
+                    highlight.OutlineColor = color
+                end
+
+                -- Update Name + Distance
+                local nameTag = esp:FindFirstChild("NameTag")
+                if nameTag then
+                    nameTag.Adornee = adornee
+                    local label = nameTag:FindFirstChild("Text")
                     if label then
-                        local dist = (adornee.Position - root.Position).Magnitude
-                        label.Text = string.format("%s (%d)", item.Name, dist)
+                        label.TextColor3 = color
+                        label.Text = string.format("%s (%d)", obj.Name, distance)
                     end
                 end
             end
