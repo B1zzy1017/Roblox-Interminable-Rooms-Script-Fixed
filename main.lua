@@ -847,6 +847,30 @@ end
 end
 
 for i, v in pairs(game:GetService("Workspace").Entities:GetChildren()) do
+ if v.Name == "E-100" then
+ESP:AddObjectListener(Workspace.Entities["E-100"], { 
+    Name = "Torso", 
+    CustomName = 'E-100', 
+    Color = Color3.fromRGB(243, 5, 255), -- Color
+    IsEnabled = "whatever" 
+})
+ESP.whatever = true
+end
+end
+
+for i, v in pairs(game:GetService("Workspace").Entities:GetChildren()) do
+ if v.Name == "XE-100" then
+ESP:AddObjectListener(Workspace.Entities["XE-100"], { 
+    Name = "Torso", 
+    CustomName = 'XE-100', 
+    Color = Color3.fromRGB(0, 255, 0), -- Color
+    IsEnabled = "whatever" 
+})
+ESP.whatever = true
+end
+end
+
+for i, v in pairs(game:GetService("Workspace").Entities:GetChildren()) do
  if v.Name == "E-142" then
 ESP:AddObjectListener(Workspace.Entities["E-142"], { 
     Name = "Torso", 
