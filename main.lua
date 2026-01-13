@@ -511,6 +511,18 @@ end
 end
 
 for i, v in pairs(game:GetService("Workspace").Entities:GetChildren()) do
+ if v.Name == "X-80" then
+ESP:AddObjectListener(Workspace.Entities["X-80"], { 
+    Name = "Torso", 
+    CustomName = 'X-80', 
+    Color = Color3.fromRGB(182, 0, 255), -- Color
+    IsEnabled = "whatever" 
+})
+ESP.whatever = true
+end
+end
+
+for i, v in pairs(game:GetService("Workspace").Entities:GetChildren()) do
  if v.Name == "A-100" then
 ESP:AddObjectListener(Workspace.Entities["A-100"], { 
     Name = "Torso", 
@@ -672,6 +684,30 @@ ESP:AddObjectListener(Workspace.Entities["A-258"], {
     Name = "Torso", 
     CustomName = 'A-258', 
     Color = Color3.fromRGB(255, 174, 0), -- Color
+    IsEnabled = "whatever" 
+})
+ESP.whatever = true
+end
+end
+
+for i, v in pairs(game:GetService("Workspace").Entities:GetChildren()) do
+ if v.Name == "X-258" then
+ESP:AddObjectListener(Workspace.Entities["X-258"], { 
+    Name = "Torso", 
+    CustomName = 'X-258', 
+    Color = Color3.fromRGB(255, 255, 0), -- Color
+    IsEnabled = "whatever" 
+})
+ESP.whatever = true
+end
+end
+
+for i, v in pairs(game:GetService("Workspace").Entities:GetChildren()) do
+ if v.Name == "XX-258" then
+ESP:AddObjectListener(Workspace.Entities["XX-258"], { 
+    Name = "Torso", 
+    CustomName = 'XX-258', 
+    Color = Color3.fromRGB(0, 255, 0), -- Color
     IsEnabled = "whatever" 
 })
 ESP.whatever = true
@@ -1236,6 +1272,30 @@ ESP:AddObjectListener(Workspace.Entities["X-248"], {
     Name = "Torso", 
     CustomName = 'X-248', 
     Color = Color3.fromRGB(0, 140, 0), -- Color
+    IsEnabled = "whatever" 
+})
+ESP.whatever = true
+end
+end
+
+for i, v in pairs(game:GetService("Workspace").Entities:GetChildren()) do
+ if v.Name == "A-130" then
+ESP:AddObjectListener(Workspace.Entities["A-130"], { 
+    Name = "Torso", 
+    CustomName = 'A-60', 
+    Color = Color3.fromRGB(255, 0, 0), -- Color
+    IsEnabled = "whatever" 
+})
+ESP.whatever = true
+end
+end
+
+for i, v in pairs(game:GetService("Workspace").Entities:GetChildren()) do
+ if v.Name == "X-130" then
+ESP:AddObjectListener(Workspace.Entities["X-130"], { 
+    Name = "Torso", 
+    CustomName = 'X-130', 
+    Color = Color3.fromRGB(255, 255, 0), -- Color
     IsEnabled = "whatever" 
 })
 ESP.whatever = true
@@ -2729,6 +2789,7 @@ local Paragraph = Tab3:CreateParagraph({Title = "Credits", Content = "\nScript m
 
 
 local Paragraph = Tab6:CreateParagraph({Title = "1.", Content = "Added Feature(s):\n\n- Remove Jumpscares\n\nDate Added: 5/22/23"})
+
 
 
 
