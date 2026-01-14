@@ -1543,6 +1543,66 @@ end
 end
 
 for i, v in pairs(game:GetService("Workspace").Entities:GetChildren()) do
+ if v.Name == "BLUEBOOTSBOWEN" then
+ESP:AddObjectListener(Workspace.Entities["BLUEBOOTSBOWEN"], { 
+    Name = "Torso", 
+    CustomName = 'BLUE BOOTS BOWEN', 
+    Color = Color3.fromRGB(0, 0, 254), -- Color
+    IsEnabled = "whatever" 
+})
+ESP.whatever = true
+end
+end
+
+for i, v in pairs(game:GetService("Workspace").Entities:GetChildren()) do
+ if v.Name == "drillinderbiesdaniel" then
+ESP:AddObjectListener(Workspace.Entities["drillinderbiesdaniel"], { 
+    Name = "Torso", 
+    CustomName = 'Drillin Derbies Daniel', 
+    Color = Color3.fromRGB(180, 255, 0), -- Color
+    IsEnabled = "whatever" 
+})
+ESP.whatever = true
+end
+end
+
+for i, v in pairs(game:GetService("Workspace").Entities:GetChildren()) do
+ if v.Name == "pickinpumaspaul" then
+ESP:AddObjectListener(Workspace.Entities["pickinpumaspaul"], { 
+    Name = "Torso", 
+    CustomName = 'Pickin Pumas Paul', 
+    Color = Color3.fromRGB(0, 255, 255), -- Color
+    IsEnabled = "whatever" 
+})
+ESP.whatever = true
+end
+end
+
+for i, v in pairs(game:GetService("Workspace").Entities:GetChildren()) do
+ if v.Name == "nuclearnikesnathan" then
+ESP:AddObjectListener(Workspace.Entities["nuclearnikesnathan"], { 
+    Name = "Torso", 
+    CustomName = 'Nuclear Nikes Nathan', 
+    Color = Color3.fromRGB(183, 254, 0), -- Color
+    IsEnabled = "whatever" 
+})
+ESP.whatever = true
+end
+end
+
+for i, v in pairs(game:GetService("Workspace").Entities:GetChildren()) do
+ if v.Name == "retrorocketsrobert" then
+ESP:AddObjectListener(Workspace.Entities["retrorocketsrobert"], { 
+    Name = "Torso", 
+    CustomName = 'Retro Rockets Robert', 
+    Color = Color3.fromRGB(250, 246, 0), -- Color
+    IsEnabled = "whatever" 
+})
+ESP.whatever = true
+end
+end
+
+for i, v in pairs(game:GetService("Workspace").Entities:GetChildren()) do
  if v.Name == "XX-10" then
 ESP:AddObjectListener(Workspace.Entities["XX-10"], { 
     Name = "Torso", 
@@ -3041,6 +3101,7 @@ local Paragraph = Tab3:CreateParagraph({Title = "Credits", Content = "\nScript m
 
 
 local Paragraph = Tab6:CreateParagraph({Title = "1.", Content = "Added Feature(s):\n\n- Remove Jumpscares\n\nDate Added: 5/22/23"})
+
 
 
 
