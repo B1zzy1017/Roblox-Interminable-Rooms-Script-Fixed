@@ -1306,7 +1306,7 @@ for i, v in pairs(game:GetService("Workspace").Entities:GetChildren()) do
  if v.Name == "A-130" then
 ESP:AddObjectListener(Workspace.Entities["A-130"], { 
     Name = "Torso", 
-    CustomName = 'A-60', 
+    CustomName = 'A-130', 
     Color = Color3.fromRGB(255, 0, 0), -- Color
     IsEnabled = "whatever" 
 })
