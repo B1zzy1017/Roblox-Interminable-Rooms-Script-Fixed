@@ -2659,6 +2659,66 @@ end
 end
 
 for i, v in pairs(game:GetService("Workspace").Entities:GetChildren()) do
+ if v.Name == "BLOODCONE-120" then
+ESP:AddObjectListener(Workspace.Entities["BLOODCONE-120"], { 
+    Name = "Torso", 
+    CustomName = 'BLOODCONE-120', 
+    Color = Color3.fromRGB(255, 0, 0), -- Color
+    IsEnabled = "whatever" 
+})
+ESP.whatever = true
+end
+end
+
+for i, v in pairs(game:GetService("Workspace").Entities:GetChildren()) do
+ if v.Name == "TEETHCONE" then
+ESP:AddObjectListener(Workspace.Entities["TEETHCONE"], { 
+    Name = "Torso", 
+    CustomName = 'TEETHCONE', 
+    Color = Color3.fromRGB(255, 0, 0), -- Color
+    IsEnabled = "whatever" 
+})
+ESP.whatever = true
+end
+end
+
+for i, v in pairs(game:GetService("Workspace").Entities:GetChildren()) do
+ if v.Name == "TEETHMINI" then
+ESP:AddObjectListener(Workspace.Entities["TEETHMINI"], { 
+    Name = "Torso", 
+    CustomName = 'TEETHMINI', 
+    Color = Color3.fromRGB(255, 0, 0), -- Color
+    IsEnabled = "whatever" 
+})
+ESP.whatever = true
+end
+end
+
+for i, v in pairs(game:GetService("Workspace").Entities:GetChildren()) do
+ if v.Name == "EVIL-244" then
+ESP:AddObjectListener(Workspace.Entities["EVIL-244"], { 
+    Name = "Torso", 
+    CustomName = 'EVIL-244', 
+    Color = Color3.fromRGB(255, 0, 0), -- Color
+    IsEnabled = "whatever" 
+})
+ESP.whatever = true
+end
+end
+
+for i, v in pairs(game:GetService("Workspace").Entities:GetChildren()) do
+ if v.Name == "BLUEVIL-244" then
+ESP:AddObjectListener(Workspace.Entities["BLUEVIL-244"], { 
+    Name = "Torso", 
+    CustomName = 'BLUEVIL-244', 
+    Color = Color3.fromRGB(0, 0, 255), -- Color
+    IsEnabled = "whatever" 
+})
+ESP.whatever = true
+end
+end
+
+for i, v in pairs(game:GetService("Workspace").Entities:GetChildren()) do
  if v.Name == "Noah" then
 ESP:AddObjectListener(Workspace.Entities.Noah, { 
     Name = "Torso", 
@@ -3473,6 +3533,7 @@ local Paragraph = Tab3:CreateParagraph({Title = "Credits", Content = "\nScript m
 
 
 local Paragraph = Tab6:CreateParagraph({Title = "1.", Content = "Added Feature(s):\n\n- Remove Jumpscares\n\nDate Added: 5/22/23"})
+
 
 
 
