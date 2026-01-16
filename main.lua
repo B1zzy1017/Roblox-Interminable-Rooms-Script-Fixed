@@ -2611,6 +2611,54 @@ end
 end
 
 for i, v in pairs(game:GetService("Workspace").Entities:GetChildren()) do
+ if v.Name == "BLUECONE-1" then
+ESP:AddObjectListener(Workspace.Entities["BLUECONE-1"], { 
+    Name = "Torso", 
+    CustomName = 'BLUECONE-1', 
+    Color = Color3.fromRGB(0, 0, 255), -- Color
+    IsEnabled = "whatever" 
+})
+ESP.whatever = true
+end
+end
+
+for i, v in pairs(game:GetService("Workspace").Entities:GetChildren()) do
+ if v.Name == "BLUECONE-2" then
+ESP:AddObjectListener(Workspace.Entities["BLUECONE-2"], { 
+    Name = "Torso", 
+    CustomName = 'BLUECONE-2', 
+    Color = Color3.fromRGB(0, 0, 255), -- Color
+    IsEnabled = "whatever" 
+})
+ESP.whatever = true
+end
+end
+
+for i, v in pairs(game:GetService("Workspace").Entities:GetChildren()) do
+ if v.Name == "BLUECONE-3" then
+ESP:AddObjectListener(Workspace.Entities["BLUECONE-3"], { 
+    Name = "Torso", 
+    CustomName = 'BLUECONE-3', 
+    Color = Color3.fromRGB(0, 0, 255), -- Color
+    IsEnabled = "whatever" 
+})
+ESP.whatever = true
+end
+end
+
+for i, v in pairs(game:GetService("Workspace").Entities:GetChildren()) do
+ if v.Name == "BLUECONE-4" then
+ESP:AddObjectListener(Workspace.Entities["BLUECONE-4"], { 
+    Name = "Torso", 
+    CustomName = 'BLUECONE-4', 
+    Color = Color3.fromRGB(0, 0, 255), -- Color
+    IsEnabled = "whatever" 
+})
+ESP.whatever = true
+end
+end
+
+for i, v in pairs(game:GetService("Workspace").Entities:GetChildren()) do
  if v.Name == "Noah" then
 ESP:AddObjectListener(Workspace.Entities.Noah, { 
     Name = "Torso", 
@@ -3425,6 +3473,7 @@ local Paragraph = Tab3:CreateParagraph({Title = "Credits", Content = "\nScript m
 
 
 local Paragraph = Tab6:CreateParagraph({Title = "1.", Content = "Added Feature(s):\n\n- Remove Jumpscares\n\nDate Added: 5/22/23"})
+
 
 
 
