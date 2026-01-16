@@ -1159,6 +1159,54 @@ end
 end
 
 for i, v in pairs(game:GetService("Workspace").Entities:GetChildren()) do
+ if v.Name == "E-69" then
+ESP:AddObjectListener(Workspace.Entities["E-69"], { 
+    Name = "Torso", 
+    CustomName = 'E-69', 
+    Color = Color3.fromRGB(255, 0, 0), -- Color
+    IsEnabled = "whatever" 
+})
+ESP.whatever = true
+end
+end
+
+for i, v in pairs(game:GetService("Workspace").Entities:GetChildren()) do
+ if v.Name == "XE-69" then
+ESP:AddObjectListener(Workspace.Entities["XE-69"], { 
+    Name = "Torso", 
+    CustomName = 'XE-69', 
+    Color = Color3.fromRGB(255, 255, 0), -- Color
+    IsEnabled = "whatever" 
+})
+ESP.whatever = true
+end
+end
+
+for i, v in pairs(game:GetService("Workspace").Entities:GetChildren()) do
+ if v.Name == "E-80" then
+ESP:AddObjectListener(Workspace.Entities["E-80"], { 
+    Name = "Torso", 
+    CustomName = 'E-80', 
+    Color = Color3.fromRGB(255, 0, 0), -- Color
+    IsEnabled = "whatever" 
+})
+ESP.whatever = true
+end
+end
+
+for i, v in pairs(game:GetService("Workspace").Entities:GetChildren()) do
+ if v.Name == "XE-80" then
+ESP:AddObjectListener(Workspace.Entities["XE-80"], { 
+    Name = "Torso", 
+    CustomName = 'XE-80', 
+    Color = Color3.fromRGB(255, 255, 0), -- Color
+    IsEnabled = "whatever" 
+})
+ESP.whatever = true
+end
+end
+
+for i, v in pairs(game:GetService("Workspace").Entities:GetChildren()) do
  if v.Name == "E-95" then
 ESP:AddObjectListener(Workspace.Entities["E-95"], { 
     Name = "Torso", 
@@ -1211,7 +1259,7 @@ for i, v in pairs(game:GetService("Workspace").Entities:GetChildren()) do
 ESP:AddObjectListener(Workspace.Entities["E-120"], { 
     Name = "Torso", 
     CustomName = 'E-120', 
-    Color = Color3.fromRGB(251, 255, 0), -- Color
+    Color = Color3.fromRGB(255, 113, 155), -- Color
     IsEnabled = "whatever" 
 })
 ESP.whatever = true
@@ -1223,7 +1271,7 @@ for i, v in pairs(game:GetService("Workspace").Entities:GetChildren()) do
 ESP:AddObjectListener(Workspace.Entities["ERM-120"], { 
     Name = "Torso", 
     CustomName = 'ERM-120', 
-    Color = Color3.fromRGB(251, 255, 0), -- Color
+    Color = Color3.fromRGB(255, 113, 155), -- Color
     IsEnabled = "whatever" 
 })
 ESP.whatever = true
@@ -3641,6 +3689,7 @@ local Paragraph = Tab3:CreateParagraph({Title = "Credits", Content = "\nScript m
 
 
 local Paragraph = Tab6:CreateParagraph({Title = "1.", Content = "Added Feature(s):\n\n- Remove Jumpscares\n\nDate Added: 5/22/23"})
+
 
 
 
