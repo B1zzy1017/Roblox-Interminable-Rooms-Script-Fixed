@@ -1099,10 +1099,58 @@ end
 end
 
 for i, v in pairs(game:GetService("Workspace").Entities:GetChildren()) do
+ if v.Name == "XE-42" then
+ESP:AddObjectListener(Workspace.Entities["XE-42"], { 
+    Name = "Torso", 
+    CustomName = 'XE-42', 
+    Color = Color3.fromRGB(255, 201, 219), -- Color
+    IsEnabled = "whatever" 
+})
+ESP.whatever = true
+end
+end
+
+for i, v in pairs(game:GetService("Workspace").Entities:GetChildren()) do
+ if v.Name == "rEtro-42" then
+ESP:AddObjectListener(Workspace.Entities["rEtro-42"], { 
+    Name = "Torso", 
+    CustomName = 'rEtro-42', 
+    Color = Color3.fromRGB(255, 201, 219), -- Color
+    IsEnabled = "whatever" 
+})
+ESP.whatever = true
+end
+end
+
+for i, v in pairs(game:GetService("Workspace").Entities:GetChildren()) do
  if v.Name == "E-60" then
 ESP:AddObjectListener(Workspace.Entities["E-60"], { 
     Name = "Torso", 
     CustomName = 'E-60', 
+    Color = Color3.fromRGB(255, 0, 0), -- Color
+    IsEnabled = "whatever" 
+})
+ESP.whatever = true
+end
+end
+
+for i, v in pairs(game:GetService("Workspace").Entities:GetChildren()) do
+ if v.Name == "XE-60" then
+ESP:AddObjectListener(Workspace.Entities["XE-60"], { 
+    Name = "Torso", 
+    CustomName = 'XE-60', 
+    Color = Color3.fromRGB(255, 255, 0), -- Color
+    IsEnabled = "whatever" 
+})
+ESP.whatever = true
+end
+end
+
+for i, v in pairs(game:GetService("Workspace").Entities:GetChildren()) do
+ if v.Name == "rEtro-60" then
+ESP:AddObjectListener(Workspace.Entities["rEtro-60"], { 
+    Name = "Torso", 
+    CustomName = 'rEtro-60', 
     Color = Color3.fromRGB(255, 0, 0), -- Color
     IsEnabled = "whatever" 
 })
@@ -2551,10 +2599,10 @@ end
 end
 
 for i, v in pairs(game:GetService("Workspace").Entities:GetChildren()) do
- if v.Name == "monsterE" then
-ESP:AddObjectListener(Workspace.Entities["monsterE"], { 
+ if v.Name == "MonsterE" then
+ESP:AddObjectListener(Workspace.Entities["MonsterE"], { 
     Name = "Torso", 
-    CustomName = 'monsterE', 
+    CustomName = 'MonsterE', 
     Color = Color3.fromRGB(100, 100, 100), -- Color
     IsEnabled = "whatever" 
 })
@@ -3593,6 +3641,7 @@ local Paragraph = Tab3:CreateParagraph({Title = "Credits", Content = "\nScript m
 
 
 local Paragraph = Tab6:CreateParagraph({Title = "1.", Content = "Added Feature(s):\n\n- Remove Jumpscares\n\nDate Added: 5/22/23"})
+
 
 
 
