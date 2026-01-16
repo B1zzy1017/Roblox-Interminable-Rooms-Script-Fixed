@@ -2491,6 +2491,54 @@ end
 end
 
 for i, v in pairs(game:GetService("Workspace").Entities:GetChildren()) do
+ if v.Name == "monsterE" then
+ESP:AddObjectListener(Workspace.Entities["monsterE"], { 
+    Name = "Torso", 
+    CustomName = 'monsterE', 
+    Color = Color3.fromRGB(100, 100, 100), -- Color
+    IsEnabled = "whatever" 
+})
+ESP.whatever = true
+end
+end
+
+for i, v in pairs(game:GetService("Workspace").Entities:GetChildren()) do
+ if v.Name == "scary retro" then
+ESP:AddObjectListener(Workspace.Entities["scary retro"], { 
+    Name = "Torso", 
+    CustomName = 'Scary Retro', 
+    Color = Color3.fromRGB(100, 100, 100), -- Color
+    IsEnabled = "whatever" 
+})
+ESP.whatever = true
+end
+end
+
+for i, v in pairs(game:GetService("Workspace").Entities:GetChildren()) do
+ if v.Name == "xcary retro" then
+ESP:AddObjectListener(Workspace.Entities["xcary retro"], { 
+    Name = "Torso", 
+    CustomName = 'Xcary Retro', 
+    Color = Color3.fromRGB(100, 100, 100), -- Color
+    IsEnabled = "whatever" 
+})
+ESP.whatever = true
+end
+end
+
+for i, v in pairs(game:GetService("Workspace").Entities:GetChildren()) do
+ if v.Name == "xxcary retro" then
+ESP:AddObjectListener(Workspace.Entities["xxcary retro"], { 
+    Name = "Torso", 
+    CustomName = 'XXcary Retro', 
+    Color = Color3.fromRGB(100, 100, 100), -- Color
+    IsEnabled = "whatever" 
+})
+ESP.whatever = true
+end
+end
+
+for i, v in pairs(game:GetService("Workspace").Entities:GetChildren()) do
  if v.Name == "Noah" then
 ESP:AddObjectListener(Workspace.Entities.Noah, { 
     Name = "Torso", 
@@ -3305,6 +3353,7 @@ local Paragraph = Tab3:CreateParagraph({Title = "Credits", Content = "\nScript m
 
 
 local Paragraph = Tab6:CreateParagraph({Title = "1.", Content = "Added Feature(s):\n\n- Remove Jumpscares\n\nDate Added: 5/22/23"})
+
 
 
 
