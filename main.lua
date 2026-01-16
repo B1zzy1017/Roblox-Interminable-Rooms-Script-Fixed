@@ -2539,6 +2539,78 @@ end
 end
 
 for i, v in pairs(game:GetService("Workspace").Entities:GetChildren()) do
+ if v.Name == "BLOODCONE-1" then
+ESP:AddObjectListener(Workspace.Entities["BLOODCONE-1"], { 
+    Name = "Torso", 
+    CustomName = 'BLOODCONE-1', 
+    Color = Color3.fromRGB(255, 0, 0), -- Color
+    IsEnabled = "whatever" 
+})
+ESP.whatever = true
+end
+end
+
+for i, v in pairs(game:GetService("Workspace").Entities:GetChildren()) do
+ if v.Name == "BLOODCONE-2" then
+ESP:AddObjectListener(Workspace.Entities["BLOODCONE-2"], { 
+    Name = "Torso", 
+    CustomName = 'BLOODCONE-2', 
+    Color = Color3.fromRGB(255, 0, 0), -- Color
+    IsEnabled = "whatever" 
+})
+ESP.whatever = true
+end
+end
+
+for i, v in pairs(game:GetService("Workspace").Entities:GetChildren()) do
+ if v.Name == "BLOODCONE-3" then
+ESP:AddObjectListener(Workspace.Entities["BLOODCONE-3"], { 
+    Name = "Torso", 
+    CustomName = 'BLOODCONE-3', 
+    Color = Color3.fromRGB(255, 0, 0), -- Color
+    IsEnabled = "whatever" 
+})
+ESP.whatever = true
+end
+end
+
+for i, v in pairs(game:GetService("Workspace").Entities:GetChildren()) do
+ if v.Name == "BLOODCONE-4" then
+ESP:AddObjectListener(Workspace.Entities["BLOODCONE-4"], { 
+    Name = "Torso", 
+    CustomName = 'BLOODCONE-4', 
+    Color = Color3.fromRGB(255, 0, 0), -- Color
+    IsEnabled = "whatever" 
+})
+ESP.whatever = true
+end
+end
+
+for i, v in pairs(game:GetService("Workspace").Entities:GetChildren()) do
+ if v.Name == "BLOODCONE-5" then
+ESP:AddObjectListener(Workspace.Entities["BLOODCONE-5"], { 
+    Name = "Torso", 
+    CustomName = 'BLOODCONE-5', 
+    Color = Color3.fromRGB(255, 0, 0), -- Color
+    IsEnabled = "whatever" 
+})
+ESP.whatever = true
+end
+end
+
+for i, v in pairs(game:GetService("Workspace").Entities:GetChildren()) do
+ if v.Name == "BLOODCONE-6" then
+ESP:AddObjectListener(Workspace.Entities["BLOODCONE-6"], { 
+    Name = "Torso", 
+    CustomName = 'BLOODCONE-6', 
+    Color = Color3.fromRGB(255, 0, 0), -- Color
+    IsEnabled = "whatever" 
+})
+ESP.whatever = true
+end
+end
+
+for i, v in pairs(game:GetService("Workspace").Entities:GetChildren()) do
  if v.Name == "Noah" then
 ESP:AddObjectListener(Workspace.Entities.Noah, { 
     Name = "Torso", 
