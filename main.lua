@@ -1027,6 +1027,42 @@ end
 end
 
 for i, v in pairs(game:GetService("Workspace").Entities:GetChildren()) do
+ if v.Name == "E-35" then
+ESP:AddObjectListener(Workspace.Entities["E-35"], { 
+    Name = "Torso", 
+    CustomName = 'E-35', 
+    Color = Color3.fromRGB(243, 243, 54), -- Color
+    IsEnabled = "whatever" 
+})
+ESP.whatever = true
+end
+end
+
+for i, v in pairs(game:GetService("Workspace").Entities:GetChildren()) do
+ if v.Name == "XE-35" then
+ESP:AddObjectListener(Workspace.Entities["XE-35"], { 
+    Name = "Torso", 
+    CustomName = 'XE-35', 
+    Color = Color3.fromRGB(243, 6, 4), -- Color
+    IsEnabled = "whatever" 
+})
+ESP.whatever = true
+end
+end
+
+for i, v in pairs(game:GetService("Workspace").Entities:GetChildren()) do
+ if v.Name == "XXE-35" then
+ESP:AddObjectListener(Workspace.Entities["XXE-35"], { 
+    Name = "Torso", 
+    CustomName = 'XXE-35', 
+    Color = Color3.fromRGB(2, 247, 247), -- Color
+    IsEnabled = "whatever" 
+})
+ESP.whatever = true
+end
+end
+
+for i, v in pairs(game:GetService("Workspace").Entities:GetChildren()) do
  if v.Name == "E-42LEFT" then
 ESP:AddObjectListener(Workspace.Entities["E-42LEFT"], { 
     Name = "Torso", 
@@ -3557,6 +3593,7 @@ local Paragraph = Tab3:CreateParagraph({Title = "Credits", Content = "\nScript m
 
 
 local Paragraph = Tab6:CreateParagraph({Title = "1.", Content = "Added Feature(s):\n\n- Remove Jumpscares\n\nDate Added: 5/22/23"})
+
 
 
 
