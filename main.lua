@@ -420,7 +420,7 @@ local Button = Tab:CreateButton({
 local ESP = loadstring(game:HttpGet("https://kiriot22.com/releases/ESP.lua"))()
 
 -- config
-ESP.Players = true
+ESP.Players = false
 ESP.Boxes = true
 ESP.Names = true
 ESP:Toggle(true)
@@ -4013,6 +4013,7 @@ local Paragraph = Tab3:CreateParagraph({Title = "Credits", Content = "\nScript m
 
 
 local Paragraph = Tab6:CreateParagraph({Title = "1.", Content = "Added Feature(s):\n\n- Remove Jumpscares\n\nDate Added: 5/22/23"})
+
 
 
 
