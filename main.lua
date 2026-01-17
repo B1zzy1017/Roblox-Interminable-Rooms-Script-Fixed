@@ -1735,6 +1735,66 @@ end
 end
 
 for i, v in pairs(game:GetService("Workspace").Entities:GetChildren()) do
+ if v.Name == "V-256" then
+ESP:AddObjectListener(Workspace.Entities["V-256"], { 
+    Name = "Torso", 
+    CustomName = 'V-256', 
+    Color = Color3.fromRGB(244, 181, 250), -- Color
+    IsEnabled = "whatever" 
+})
+ESP.whatever = true
+end
+end
+
+for i, v in pairs(game:GetService("Workspace").Entities:GetChildren()) do
+ if v.Name == "V-256-A" then
+ESP:AddObjectListener(Workspace.Entities["V-256-A"], { 
+    Name = "Torso", 
+    CustomName = 'V-256-A', 
+    Color = Color3.fromRGB(244, 181, 250), -- Color
+    IsEnabled = "whatever" 
+})
+ESP.whatever = true
+end
+end
+
+for i, v in pairs(game:GetService("Workspace").Entities:GetChildren()) do
+ if v.Name == "V-319" then
+ESP:AddObjectListener(Workspace.Entities["V-319"], { 
+    Name = "Torso", 
+    CustomName = 'V-319', 
+    Color = Color3.fromRGB(91, 254, 254), -- Color
+    IsEnabled = "whatever" 
+})
+ESP.whatever = true
+end
+end
+
+for i, v in pairs(game:GetService("Workspace").Entities:GetChildren()) do
+ if v.Name == "V-345" then
+ESP:AddObjectListener(Workspace.Entities["V-345"], { 
+    Name = "Torso", 
+    CustomName = 'V-345', 
+    Color = Color3.fromRGB(255, 255, 255), -- Color
+    IsEnabled = "whatever" 
+})
+ESP.whatever = true
+end
+end
+
+for i, v in pairs(game:GetService("Workspace").Entities:GetChildren()) do
+ if v.Name == "VWM-345" then
+ESP:AddObjectListener(Workspace.Entities["VWM-345"], { 
+    Name = "Torso", 
+    CustomName = 'VWM-345', 
+    Color = Color3.fromRGB(255, 255, 255), -- Color
+    IsEnabled = "whatever" 
+})
+ESP.whatever = true
+end
+end
+
+for i, v in pairs(game:GetService("Workspace").Entities:GetChildren()) do
  if v.Name == "A-221" then
 ESP:AddObjectListener(Workspace.Entities["A-221"], { 
     Name = "Torso", 
@@ -3857,6 +3917,7 @@ local Paragraph = Tab3:CreateParagraph({Title = "Credits", Content = "\nScript m
 
 
 local Paragraph = Tab6:CreateParagraph({Title = "1.", Content = "Added Feature(s):\n\n- Remove Jumpscares\n\nDate Added: 5/22/23"})
+
 
 
 
