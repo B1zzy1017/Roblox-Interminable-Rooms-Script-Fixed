@@ -417,7 +417,7 @@ local Button = Tab:CreateButton({
     EntitiesFolder.ChildAdded:Connect(function(entity) 
 	pcall(function()
    -- loadstring
-local ESP = loadstring(game:HttpGet("https://kiriot22.com/releases/ESP.lua"))()
+local ESP = loadstring(game:HttpGet("https://raw.githubusercontent.com/B1zzy1017/Roblox-Interminable-Rooms-Script-Fixed/refs/heads/main/kiriot22remake"))()
 
 -- config
 ESP.Players = false
@@ -4013,6 +4013,7 @@ local Paragraph = Tab3:CreateParagraph({Title = "Credits", Content = "\nScript m
 
 
 local Paragraph = Tab6:CreateParagraph({Title = "1.", Content = "Added Feature(s):\n\n- Remove Jumpscares\n\nDate Added: 5/22/23"})
+
 
 
 
