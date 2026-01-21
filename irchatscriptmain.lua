@@ -1,5 +1,6 @@
 -- Client-side entity announcer (exploit)
--- Skips announcing certain object names (spam control)
+-- Announces custom spawn/despawn messages
+-- Skips exact-name entities listed below
 
 local Players = game:GetService("Players")
 local TextChatService = game:GetService("TextChatService")
@@ -7,9 +8,8 @@ local TextChatService = game:GetService("TextChatService")
 local player = Players.LocalPlayer
 local EntitiesFolder = workspace:WaitForChild("Entities")
 
--- Names to ignore
+-- Exact names to ignore (spam control)
 local IGNORE_NAMES = {
-	-- Previous entries
 	["Noah"] = true,
 	["John"] = true,
 
@@ -25,17 +25,24 @@ local IGNORE_NAMES = {
 	["A-258"] = true,
 	["A-278"] = true,
 	["A-300"] = true,
-	["X-247"] = true,
+	["A-300-86"] = true,
+
+	["X-80"] = true,
+	["X-120 Minion"] = true,
+	["X-150"] = true,
 	["X-244"] = true,
 	["X-246"] = true,
+	["X-247"] = true,
 	["X-248"] = true,
 	["X-258"] = true,
 	["X-278"] = true,
 	["X-300"] = true,
+
 	["XX-150"] = true,
 	["XX-244"] = true,
 	["XX-258"] = true,
 	["XX-300"] = true,
+
 	["cursedA300"] = true,
 	["scamy-120"] = true,
 	["scary-150"] = true,
@@ -48,20 +55,52 @@ local IGNORE_NAMES = {
 	["DG-1"] = true,
 	["CHA-1"] = true,
 	["BM-1"] = true,
+
+	["E-42"] = true,
 	["E-42LEFT"] = true,
 	["E-42RIGHT"] = true,
-	["E-42"] = true,
+	["XE-42"] = true,
+	["rEtro-42"] = true,
+	["scare-42"] = true,
 	["scare-42LEFT"] = true,
 	["scare-42RIGHT"] = true,
-	["scare-42"] = true,
+
+	["E-50"] = true,
+	["BE-50"] = true,
+	["TE-50"] = true,
+	["E-80"] = true,
+	["XE-80"] = true,
+
+	["ERM-120"] = true,
+	["E-246"] = true,
+	["XE-246"] = true,
+
+	["E-300"] = true,
+	["XE-300"] = true,
+	["XXE-300"] = true,
+
 	["V-5"] = true,
 	["XV-5"] = true,
 	["XXV-5"] = true,
 	["scarv-5"] = true,
+
+	["Vifo"] = true,
+	["XVifo"] = true,
+	["XXVifo"] = true,
+	["Bifo"] = true,
+
+	["V-86"] = true,
+	["XV-86"] = true,
+	["V-99"] = true,
+	["V-160"] = true,
+	["V-200"] = true,
+	["XV-200"] = true,
+	["V-256-A"] = true,
+	["VWM-345"] = true,
+
 	["ULB-278"] = true,
 	["TLAB-278"] = true,
 	["XTLAB-278"] = true,
-	["G-GLITCH"] = true,
 
 	["billy"] = true,
 	["purplebilly"] = true,
@@ -70,9 +109,9 @@ local IGNORE_NAMES = {
 	["BilleBobb"] = true,
 	["BluehBobb"] = true,
 	["TabbleBobb"] = true,
+
 	["ay eight ee"] = true,
 	["ay two hundred and fifty eight"] = true,
-
 	["Dog"] = true,
 	["MonsterE"] = true,
 	["Bob"] = true,
@@ -80,8 +119,6 @@ local IGNORE_NAMES = {
 	["BLOODCONE-7"] = true,
 	["TEETHMINI"] = true,
 	["Xoah"] = true,
-	["X-120 Minion"] = true,
-	["X-150"] = true,
 	["BLUE-244"] = true,
 	["XBLUE-244"] = true,
 	["TABLE-244"] = true,
@@ -89,7 +126,6 @@ local IGNORE_NAMES = {
 	["EVIL-244"] = true,
 	["bubugugup"] = true,
 
-	-- Latest additions
 	["tinytimbstony"] = true,
 	["radioactiverunnersremington"] = true,
 	["BIGBOOTSBOWEN"] = true,
@@ -101,40 +137,16 @@ local IGNORE_NAMES = {
 	["chasincleatscharles"] = true,
 	["bombasticbootsbrooke"] = true,
 	["nuclearnikesnathan"] = true,
+
 	["DNC-1"] = true,
 	["PH-1"] = true,
 	["JOLLY-1"] = true,
-	["XE-42"] = true,
-	["rEtro-42"] = true,
-	["E-50"] = true,
-	["BE-50"] = true,
-	["TE-50"] = true,
-	["E-80"] = true,
-	["XE-80"] = true,
-	["ERM-120"] = true,
-	["E-246"] = true,
-	["XE-246"] = true,
-	["E-300"] = true,
-	["XE-300"] = true,
-	["XXE-300"] = true,
-	["Vifo"] = true,
-	["XVifo"] = true,
-	["XXVifo"] = true,
-	["Bifo"] = true,
-	["V-86"] = true,
-	["XV-86"] = true,
-	["A-300-86"] = true,
-	["V-99"] = true,
-	["V-160"] = true,
-	["V-200"] = true,
-	["XV-200"] = true,
-	["V-256-A"] = true,
-	["VWM-345"] = true
+	["G-GLITCH"] = true
 }
 
 local tracked = {}
 
--- Chat sender (new + legacy chat)
+-- Send chat message as YOU
 local function say(msg)
 	if TextChatService.ChatVersion == Enum.ChatVersion.TextChatService then
 		local channel = TextChatService.TextChannels:FindFirstChild("RBXGeneral")
@@ -151,20 +163,18 @@ for _, entity in ipairs(EntitiesFolder:GetChildren()) do
 	tracked[entity] = true
 end
 
--- Spawn detection
+-- Spawn
 EntitiesFolder.ChildAdded:Connect(function(entity)
 	if tracked[entity] then return end
 	tracked[entity] = true
-
 	if IGNORE_NAMES[entity.Name] then return end
-	say(entity.Name .. " spawned")
+	say(entity.Name .. " has spawned -_-")
 end)
 
--- Despawn detection
+-- Despawn
 EntitiesFolder.ChildRemoved:Connect(function(entity)
 	if not tracked[entity] then return end
 	tracked[entity] = nil
-
 	if IGNORE_NAMES[entity.Name] then return end
-	say(entity.Name .. " despawned")
+	say(entity.Name .. " has despawned :)")
 end)
