@@ -3763,20 +3763,20 @@ local Section = Tab3:CreateSection("Credits")
 
 
 --Paragraphs
-local Paragraph = Tab2:CreateParagraph({Title = "A-10", Content = "It does not rebound. When you hear it, hide in anything."})
-local Paragraph = Tab2:CreateParagraph({Title = "X-10", Content = "It is just like A-10 but faster."})
+local Paragraph = Tab2:CreateParagraph({Title = "A-15", Content = "It does not rebound. When you hear it, hide in anything."})
+local Paragraph = Tab2:CreateParagraph({Title = "X-15", Content = "It is just like A-10 but faster."})
 local Paragraph = Tab2:CreateParagraph({Title = "A-35", Content = "It rebounds 1.5 times. When you hear it, hide in anything."})
 local Paragraph = Tab2:CreateParagraph({Title = "X-35", Content = "It rebounds 2 times. While it is faster than A-35, hide in anything."})
 local Paragraph = Tab2:CreateParagraph({Title = "A-60", Content = "When it goes to your room, it stays for a moment then dissapears."})
 local Paragraph = Tab2:CreateParagraph({Title = "X-60", Content = "A-60 but faster, same strategy."})
 local Paragraph = Tab2:CreateParagraph({Title = "A-100", Content = "It goes to the latest room and checks GRAY LOCKERS, then goes back."})
 local Paragraph = Tab2:CreateParagraph({Title = "A-120", Content = "Simply hide. It rebounds a few times and spawns minions."})
+local Paragraph = Tab2:CreateParagraph({Title = "M-120", Content = "Spawned by A-120. Shoots orbs that track unhidden players."})
 local Paragraph = Tab2:CreateParagraph({Title = "A-150", Content = "It appears from a paper. It checks all lockers in latest room."})
 local Paragraph = Tab2:CreateParagraph({Title = "A-183", Content = "Simply hide. It rebounds multiple times."})
 local Paragraph = Tab2:CreateParagraph({Title = "A-200", Content = "It comes in front of you. Simply hide when you hear a loud whoosh."})
 local Paragraph = Tab2:CreateParagraph({Title = "X-200", Content = "Opposite of A-200, spawns infront of you. Dont hide when its active."})
 local Paragraph = Tab2:CreateParagraph({Title = "A-245", Content = "It breaks all the lockers in the current room."})
-local Paragraph = Tab2:CreateParagraph({Title = "A-258", Content = "It appears in the current room and emits an earrape sound."})
 local Paragraph = Tab2:CreateParagraph({Title = "A-278", Content = "It comes from a portal. It spawns many clones and minions of itself."})
 local Paragraph = Tab2:CreateParagraph({Title = "TLAB-278", Content = "It comes from an A-278 raid. It checks tables."})
 local Paragraph = Tab2:CreateParagraph({Title = "ULB-278", Content = "It comes from an A-278 raid. It checks Blue Lockers."})
@@ -3796,7 +3796,7 @@ local Paragraph = Tab2:CreateParagraph({Title = "BM-1", Content = "Don't go near
 local Paragraph = Tab2:CreateParagraph({Title = "E-22", Content = "Hide when you think it is close to your location."})
 local Paragraph = Tab2:CreateParagraph({Title = "XE-22", Content = "E-22 but faster."})
 local Paragraph = Tab2:CreateParagraph({Title = "E-42", Content = "Goes from the either sides of the room. DON'T get close to it."})
-local Paragraph = Tab2:CreateParagraph({Title = "E-60", Content = "Hide when you think it is close to your location."})
+local Paragraph = Tab2:CreateParagraph({Title = "E-60", Content = "Hide when you think it is close to your location. Gets faster every spawn."})
 local Paragraph = Tab2:CreateParagraph({Title = "E-142", Content = "It will go to your room. Hide immediately then wait for it."})
 local Paragraph = Tab2:CreateParagraph({Title = "E-144", Content = "Simmilar to A-200, it appears in the current room. Hide immediately as it has aimscript."})
 local Paragraph = Tab2:CreateParagraph({Title = "E-200", Content = "It appears in the current room. It plays a beeping sound few times."})
@@ -3822,13 +3822,81 @@ local Paragraph = Tab2:CreateParagraph({Title = "John", Content = "It is just a 
 local Section = Tab2:CreateSection("Removed/Old Builds")
 
 
-local Paragraph = Tab2:CreateParagraph({Title = "Trollface", Content = "It is so fast."})
+local Paragraph = Tab2:CreateParagraph({Title = "Trollface", Content = "It is so fast that it instantkills. (Does minimal damage in FEVER)"})
 local Paragraph = Tab2:CreateParagraph({Title = "G-GLITCH", Content = "Don't worry. Even though he is very fast, he is harmless."})
 local Paragraph = Tab2:CreateParagraph({Title = "Mario", Content = "It is just John but rarer."})
-local Paragraph = Tab2:CreateParagraph({Title = "A-80", Content = "Don't get close to it or you will get damaged."})
-local Paragraph = Tab2:CreateParagraph({Title = "A-221", Content = "It acts like A-183 but rebounds much more."})
-local Paragraph = Tab2:CreateParagraph({Title = "A-246", Content = "Hide as it appears in the current room and rebounds at a close range."})
-local Paragraph = Tab2:CreateParagraph({Title = "A-258", Content = "It appears in the current room and emits an earrape sound."})
+local Paragraph = Tab2:CreateParagraph({Title = "A-80", Content = "Don't get close to it or you will get damaged. (Instantly dies in FEVER)"})
+local Paragraph = Tab2:CreateParagraph({Title = "A-221", Content = "It acts like A-183 but rebounds much more. (Dies in FEVER when a player is close to it)"})
+local Paragraph = Tab2:CreateParagraph({Title = "A-246", Content = "Hide as it appears in the current room and rebounds at a close range. (Instantly dies in FEVER)"})
+local Paragraph = Tab2:CreateParagraph({Title = "A-258", Content = "It appears in the current room and emits an earrape sound. (Instantly dies in FEVER)"})
+local Paragraph = Tab2:CreateParagraph({Title = "A-404", Content = "It is very fast and ignores hiding spots. Will kick you if caught. (Harmless in FEVER)"})
+
+
+local Section = Tab2:CreateSection("April Fools 2023")
+
+
+local Paragraph = Tab2:CreateParagraph({Title = "XX-15", Content = "X-10 but much faster."})
+local Paragraph = Tab2:CreateParagraph({Title = "XX-35", Content = "X-35 but much faster and rebounds 2 more times."})
+local Paragraph = Tab2:CreateParagraph({Title = "A-50", Content = "A-60 but with no screenshake."})
+local Paragraph = Tab2:CreateParagraph({Title = "XX-60", Content = "X-60 but much faster."})
+local Paragraph = Tab2:CreateParagraph({Title = "Trollface-90", Content = "Stop moving when it is on your screen."})
+local Paragraph = Tab2:CreateParagraph({Title = "A-220", Content = "Same as A-221."})
+local Paragraph = Tab2:CreateParagraph({Title = "X-220", Content = "Same as A-220 but faster and rebounds more."})
+local Paragraph = Tab2:CreateParagraph({Title = "A-247", Content = "Same as A-246."})
+local Paragraph = Tab2:CreateParagraph({Title = "X-247", Content = "Same as A-247 but faster and rebounds more."})
+local Paragraph = Tab2:CreateParagraph({Title = "Billy", Content = "Same as A-278."})
+local Paragraph = Tab2:CreateParagraph({Title = "Sad Billy", Content = "Same as TLAB-278."})
+local Paragraph = Tab2:CreateParagraph({Title = "Purple Billy", Content = "Same as ULB-278."})
+local Paragraph = Tab2:CreateParagraph({Title = "Bully Billy", Content = "It comes from a Billy raid. It damages you if near."})
+local Paragraph = Tab2:CreateParagraph({Title = "XXE-1", Content = "Same as XE-1 but does more damage."})
+
+
+local Section = Tab2:CreateSection("April Fools 2024")
+
+
+local Paragraph = Tab2:CreateParagraph({Title = "A-1", Content = "Damages you if near."})
+local Paragraph = Tab2:CreateParagraph({Title = "awesome-60", Content = "Same as A-50."})
+local Paragraph = Tab2:CreateParagraph({Title = "ay eight ee", Content = "Same as A-80 but deals less damage."})
+local Paragraph = Tab2:CreateParagraph({Title = "X-100", Content = "A-100 but faster."})
+local Paragraph = Tab2:CreateParagraph({Title = "XX-100", Content = "X-100 but even faster."})
+local Paragraph = Tab2:CreateParagraph({Title = "awesome-200", Content = "Same as A-200"})
+local Paragraph = Tab2:CreateParagraph({Title = "XX-200", Content = "It will announce either to hide or not. Listen to him or die."})
+local Paragraph = Tab2:CreateParagraph({Title = "ay two hundred and fifty eight", Content = "A-258 but despawns instantly."})
+local Paragraph = Tab2:CreateParagraph({Title = "A-260", Content = "A-60 but is laggier and slower."})
+local Paragraph = Tab2:CreateParagraph({Title = "Bille Bobb", Content = "Same as A-278."})
+local Paragraph = Tab2:CreateParagraph({Title = "Tabble Bobb", Content = "Same as TLAB-278."})
+local Paragraph = Tab2:CreateParagraph({Title = "Blueh Bobb", Content = "Same as ULB-278."})
+local Paragraph = Tab2:CreateParagraph({Title = "A-400", Content = "A-200 but is laggier and slower."})
+local Paragraph = Tab2:CreateParagraph({Title = "XXE-22", Content = "XE-22 but much faster."})
+local Paragraph = Tab2:CreateParagraph({Title = "XXV-5", Content = "XV-5 but jumps even faster."})
+
+
+local Section = Tab2:CreateSection("April Fools 2024 (SCARY MODE)")
+
+
+local Paragraph = Tab2:CreateParagraph({Title = "SCARY-15", Content = "A-15 but stays in the room like A-60."})
+local Paragraph = Tab2:CreateParagraph({Title = "SCARY-35", Content = "Same as XX-35 but with one additional rebound."})
+local Paragraph = Tab2:CreateParagraph({Title = "SCARY-60", Content = "Same as A-60 but goes past the current door when despawning."})
+local Paragraph = Tab2:CreateParagraph({Title = "SCARY-100", Content = "(SILENT AND BUGGED) A-100 but checks all lockers at once and rebounds multiple times."})
+local Paragraph = Tab2:CreateParagraph({Title = "SCARY-120", Content = "Same as A-120."})
+local Paragraph = Tab2:CreateParagraph({Title = "SCAMY-120", Content = "Spawned by SCARY-120. Shoots MANY orbs that track unhidden players."})
+local Paragraph = Tab2:CreateParagraph({Title = "SCARY-150", Content = "Same as A-150. but backtracks when despawning."})
+local Paragraph = Tab2:CreateParagraph({Title = "SCARY-183", Content = "(SILENT AND BUGGED) Same as A-221."})
+local Paragraph = Tab2:CreateParagraph({Title = "SCARY-200", Content = "Same as A-200."})
+local Paragraph = Tab2:CreateParagraph({Title = "SCARY-245", Content = "A-245 but rebounds multiple times."})
+local Paragraph = Tab2:CreateParagraph({Title = "SCARY-300", Content = "Same as A-300 but spawns scary entities."})
+local Paragraph = Tab2:CreateParagraph({Title = "SCARY-332", Content = "Same as A-332 but once it passed it will not come back for you."})
+local Paragraph = Tab2:CreateParagraph({Title = "SCARY-350", Content = "Same as A-350."})
+local Paragraph = Tab2:CreateParagraph({Title = "SCARE-22", Content = "Same as E-22."})
+local Paragraph = Tab2:CreateParagraph({Title = "SCARE-42", Content = "Same as E-42."})
+local Paragraph = Tab2:CreateParagraph({Title = "SCARE-60", Content = "Same as E-60 but if faster during earlier spawns."})
+local Paragraph = Tab2:CreateParagraph({Title = "SCARE-142", Content = "Same as E-142 but quieter."})
+local Paragraph = Tab2:CreateParagraph({Title = "SCARE-144", Content = "Same as E-144 with no aimscript."})
+local Paragraph = Tab2:CreateParagraph({Title = "SCARE-200", Content = "Same as E-200 but quieter."})
+local Paragraph = Tab2:CreateParagraph({Title = "SCARV-5", Content = "V-5 but jumps faster."})
+local Paragraph = Tab2:CreateParagraph({Title = "SCARV-27", Content = "Same as V-27."})
+local Paragraph = Tab2:CreateParagraph({Title = "SCARV-35", Content = "Same as V-35 but has a longer fake despawn and temporarily becomes faster."})
+local Paragraph = Tab2:CreateParagraph({Title = "SCARV-50", Content = "Same as V-50."})
 
 
 
@@ -4029,6 +4097,7 @@ local Paragraph = Tab3:CreateParagraph({Title = "Credits", Content = "\nScript m
 
 
 local Paragraph = Tab6:CreateParagraph({Title = "1.", Content = "Added Feature(s):\n\n- Remove Jumpscares\n\nDate Added: 5/22/23"})
+
 
 
 
